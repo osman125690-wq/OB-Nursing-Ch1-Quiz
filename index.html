@@ -153,15 +153,21 @@ function savePatch(patch) {
 
 function startFresh(t, s) {
   const [a, b] = STAGES[t][s - 1];
-  order = shuffle(Array.from({ length: b - a }, (_, k) => a + k));
+  order = shuffle(Array.from({ length: b - a }, (_, k) => k));
   type = t; stage = s; index = 0; answers = []; warn = false; pending = null;
   delete progress[keyOf(t, s)]; persist();
   screen = 'quiz'; render();
 }
 
 function loadSaved(t, s, sv) {
-  type = t; stage = s; order = sv.order; answers = sv.answers;
-  index = sv.done ? sv.order.length : Math.min(sv.index, sv.order.length - 1);
+  const [a, b] = STAGES[t][s - 1]; const len = b - a;
+  let ord = Array.isArray(sv.order) ? sv.order.slice() : [];
+  if (ord.length !== len || ord.some(x => typeof x !== 'number' || x < 0 || x >= len)) {
+    ord = ord.map(x => x - a);
+    if (ord.length !== len || ord.some(x => x < 0 || x >= len)) ord = Array.from({ length: len }, (_, k) => k);
+  }
+  type = t; stage = s; order = ord; answers = Array.isArray(sv.answers) ? sv.answers : [];
+  index = sv.done ? ord.length : Math.min(sv.index, ord.length - 1);
   warn = false; pending = null;
   screen = sv.done ? 'results' : 'quiz'; render();
 }
