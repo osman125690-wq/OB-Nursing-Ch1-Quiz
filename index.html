@@ -2,470 +2,306 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>تمريض النسا والتوليد - الفصل الأول 🩺</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f4efec">
+<title>نسا وتوليد: الفصل الأول — 80 سؤال</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
+:root {
+  --ink: #4d3533;
+  --ink70: rgba(77,53,51,.7);
+  --hairline: rgba(77,53,51,.1);
+  --teal: #73a89a;
+  --red: #ed313e;
+  --bg: #f4efec;
+  --card: #fdfcfb;
+  --serif: "Noto Naskh Arabic", Georgia, "Times New Roman", serif;
+  --sans: "Noto Sans Arabic", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+}
 * { margin:0; padding:0; box-sizing:border-box; }
-body { background:linear-gradient(135deg,#faf6f2 0%,#f4efec 100%); font-family:'Segoe UI','Tajawal','Cairo',sans-serif; color:#2b2f36; padding:20px; min-height:100vh; }
-.container { max-width:800px; margin:0 auto; }
-.made-for { text-align:center; margin:4px 0 18px 0; }
-.made-for span { display:inline-block; background:#ffffff; border:1px solid #e8ddd3; box-shadow:0 4px 14px rgba(80,60,45,.08); color:#8a7a6c; font-size:14px; font-weight:600; letter-spacing:.6px; padding:8px 22px; border-radius:30px; }
-.main-btn, .stage-btn, .nav-btn { background:#1e5a7a; border:none; padding:10px 20px; margin:5px; border-radius:30px; color:white; cursor:pointer; font-size:16px; }
-.stage-btn { background:#2a6f95; width:100%; text-align:right; display:flex; justify-content:space-between; align-items:center; }
-.stage-btn .badge { font-size:13px; background:#1a4f6d; padding:3px 12px; border-radius:15px; }
-.back-btn { background:#4a8260; border:none; padding:10px 20px; border-radius:30px; color:white; cursor:pointer; margin-bottom:15px; display:inline-block; }
-.quiz-card { background:#ffffff; border-radius:20px; padding:20px; border:1px solid #e8ddd3; box-shadow:0 8px 28px rgba(80,60,45,.07); margin-top:20px; }
-.question-text { font-size:18px; font-weight:bold; margin-bottom:6px; line-height:1.6; direction:ltr; text-align:left; }
-.question-ar { font-size:15px; color:#5f6b76; margin-bottom:16px; border-bottom:1px solid #e6dcd2; padding-bottom:10px; line-height:1.7; }
-.option-item { background:#fdfaf7; border-radius:15px; padding:12px; margin:8px 0; border:1px solid #e2d8cd; cursor:pointer; line-height:1.6; }
-.option-item .opt-ar { display:block; font-size:13px; color:#6b7684; margin-top:2px; }
-.option-item .opt-en { direction:ltr; display:block; text-align:left; }
-.option-item:hover { background:#f4ede5; }
-.option-item.locked { cursor:default; }
-.option-correct { background:#10b981 !important; border-color:#10b981 !important; color:#03251a; }
-.option-correct .opt-ar, .option-wrong .opt-ar { color:inherit; }
-.option-wrong { background:#ef4444 !important; border-color:#ef4444 !important; color:#2b0505; }
-.feedback { background:#f0f6fb; border-radius:12px; padding:12px; margin:10px 0; border-right:4px solid #3b82f6; line-height:1.7; }
-.feedback.correct { border-right-color:#10b981; background:#ecfdf3; }
-.feedback.wrong { border-right-color:#ef4444; background:#fef1f1; }
-.score-board { background:#efe8e0; color:#4a3f34; padding:5px 15px; border-radius:25px; display:inline-block; margin-bottom:15px; }
-.progress-wrap { background:#e9e0d6; border-radius:25px; height:8px; margin:0 0 15px 0; overflow:hidden; }
-.progress-bar { background:#10b981; height:100%; transition:width .3s; }
-.nav-buttons { display:flex; gap:10px; margin-top:20px; }
-.nav-btn { flex:1; }
-.hidden { display:none !important; }
-.small-back { background:#4a8260; border:none; padding:5px 12px; border-radius:20px; color:white; cursor:pointer; font-size:12px; margin-bottom:10px; display:inline-block; }
-.motivation { background:#fdf7e8; border:1px dashed #dcc79c; border-radius:15px; padding:10px 15px; margin:15px 0; text-align:center; font-size:15px; color:#92610e; min-height:44px; }
-.mistakes-box { background:#f8f3ec; border:1px solid #eee3d6; padding:15px; border-radius:15px; margin-top:15px; text-align:right; }
-.mistakes-box li { margin-bottom:12px; line-height:1.7; }
-.mistakes-box .m-en { direction:ltr; text-align:left; display:block; }
-.results-hero { text-align:center; }
-.reset-btn { background:#f7e6e6; border:none; padding:8px 16px; border-radius:20px; color:#b0524f; cursor:pointer; font-size:12px; margin-top:20px; }
+html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+body {
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:14px;
+  line-height:24px;
+  min-height:100vh;
+}
+button { font-family:inherit; cursor:pointer; }
+.eyebrow {
+  text-align:center;
+  padding:20px 16px 16px;
+  font-size:13px;
+  color:var(--ink70);
+  letter-spacing:.3px;
+}
+.card {
+  background:var(--card);
+  border-radius:24px 24px 0 0;
+  box-shadow:0 1px 2px rgba(37,31,33,.06), 0 6px 18px rgba(37,31,33,.05);
+  max-width:560px;
+  margin:0 auto;
+  padding:32px 24px 48px;
+  min-height:calc(100vh - 60px);
+}
+.title { font-family:var(--serif); font-size:28px; line-height:1.25; font-weight:500; color:var(--ink); }
+.fact { color:var(--teal); font-size:14px; font-weight:600; margin-top:6px; }
+.intro { font-size:14px; line-height:24px; color:var(--ink); margin-top:12px; }
+.hero { width:100%; aspect-ratio:3/2; object-fit:cover; border-radius:8px; margin-top:20px; display:block; }
+.caption { font-size:12px; line-height:20px; color:var(--ink70); margin-top:8px; }
+.grouplabel { font-family:var(--serif); font-size:21px; line-height:1.2; font-weight:500; color:var(--ink); margin:0 0 12px; }
+.section { margin-top:36px; animation:fadein .3s ease; }
+@keyframes fadein { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+.btn {
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  border-radius:999px; padding:10px 20px; font-size:14px; line-height:14px;
+  border:1px solid transparent; transition:all .2s ease;
+}
+.btn-primary { background:var(--ink); color:var(--card); border-color:var(--ink); box-shadow:0 1px 2px rgba(37,31,33,.05); }
+.btn-primary:hover { opacity:.88; }
+.btn-secondary { background:#fff; color:var(--ink); border-color:var(--hairline); box-shadow:0 1px 2px rgba(37,31,33,.05); }
+.btn-secondary:hover { border-color:rgba(77,53,51,.3); }
+.btn-ghost { background:transparent; color:var(--ink); }
+.btn-ghost:hover { background:rgba(77,53,51,.05); }
+.btn-compact { padding:8px 16px; font-size:13px; }
+.btnrow { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0; }
+.motivation { border:1px dashed var(--hairline); border-radius:12px; padding:10px 14px; margin:12px 0; text-align:center; color:var(--ink70); font-size:14px; line-height:24px; transition:opacity .3s; }
+.stagelist { display:flex; flex-direction:column; gap:8px; }
+.stage {
+  width:100%; display:flex; justify-content:space-between; align-items:center; gap:12px;
+  background:none; border:1px solid var(--hairline); border-radius:12px; padding:14px 16px;
+  font-size:15px; color:var(--ink); text-align:start; transition:border-color .2s;
+}
+.stage:hover { border-color:var(--teal); }
+.badge { color:var(--ink70); font-size:13px; white-space:nowrap; }
+.stagechoice { display:flex; flex-wrap:wrap; gap:8px; padding:8px 4px 0; animation:fadein .25s ease; }
+.scorebar { display:flex; justify-content:space-between; gap:12px; color:var(--ink70); font-size:13px; margin:16px 0 8px; }
+.track { background:var(--hairline); border-radius:99px; height:6px; overflow:hidden; margin-bottom:18px; }
+.fill { background:var(--teal); height:100%; transition:width .3s; }
+.q { font-size:17px; font-weight:600; line-height:26px; text-align:left; color:var(--ink); direction:ltr; }
+.qar { font-size:14px; line-height:24px; color:var(--ink70); margin-top:6px; padding-bottom:12px; border-bottom:1px solid var(--hairline); }
+.options { display:flex; flex-direction:column; gap:8px; margin:14px 0; }
+.opt {
+  border:1px solid var(--hairline); border-radius:12px; padding:12px 14px; background:none;
+  font-size:14px; line-height:22px; color:var(--ink); text-align:start; transition:border-color .2s, background .2s;
+  width:100%;
+}
+.opt:hover { border-color:var(--teal); }
+.opt.locked { cursor:default; }
+.opt.correct { border:2px solid var(--teal); background:rgba(115,168,154,.16); font-weight:600; padding:11px 13px; }
+.opt.wrong { border:2px solid var(--red); background:rgba(237,49,62,.08); padding:11px 13px; }
+.opt .open { display:block; text-align:left; direction:ltr; }
+.opt .opar { display:block; color:var(--ink70); font-size:13px; margin-top:2px; }
+.opt.correct .opar, .opt.wrong .opar { color:inherit; }
+.feedback { border-radius:12px; padding:12px 14px; margin:10px 0; font-size:14px; line-height:24px; border-inline-start:4px solid var(--hairline); animation:fadein .25s ease; }
+.feedback.ok { border-inline-start-color:var(--teal); background:rgba(115,168,154,.12); }
+.feedback.no { border-inline-start-color:var(--red); background:rgba(237,49,62,.07); }
+.nav { display:flex; gap:8px; margin-top:16px; }
+.nav > * { flex:1; }
+.results { text-align:center; padding:8px 0 4px; }
+.bigscore { font-size:21px; font-weight:600; color:var(--ink); }
+.resultmsg { color:var(--ink70); font-size:14px; margin-top:4px; }
+.mistakes { margin:12px 0; }
+.mtitle { font-weight:600; margin-bottom:8px; }
+.mitem { border:1px solid var(--hairline); border-radius:12px; padding:12px 14px; margin-bottom:8px; font-size:14px; line-height:24px; }
+.men { font-weight:600; text-align:left; direction:ltr; margin-bottom:4px; }
+.mex { color:var(--ink70); }
+.closing { margin-top:48px; font-size:14px; line-height:24px; color:var(--ink70); }
 </style>
 </head>
 <body>
-<div class="container">
-
-  <div class="made-for"><span>&#10024; Made for Osman &#10024;</span></div>
-
-  <!-- الشاشة الرئيسية -->
-  <div id="mainMenu">
-    <div style="text-align:center; margin-bottom:10px;">
-      <h2>🤰 تمريض النسا والتوليد</h2>
-      <p style="color:#5f6b76; margin-top:5px;">الفصل الأول: تشريح الجهاز التناسلي الأنثوي والدورة الشهرية</p>
-    </div>
-    <div class="motivation" id="motivationMain"></div>
-    <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-top:15px;">
-      <button class="main-btn" id="mcqBtn">📖 اختر الإجابة الصحيحة (34 سؤال)</button>
-      <button class="main-btn" id="tfBtn">✅ صح / خطأ (46 سؤال)</button>
-    </div>
-    <div style="text-align:center;">
-      <button class="reset-btn" id="resetBtn">🗑️ مسح كل التقدم المحفوظ</button>
-    </div>
-  </div>
-
-  <!-- قائمة المراحل -->
-  <div id="stagesMenu" class="hidden">
-    <button class="back-btn" id="backToMainBtn">🏠 رجوع للرئيسية</button>
-    <div class="motivation" id="motivationStages"></div>
-    <h3 id="stagesTitle" style="margin-bottom:10px;"></h3>
-    <div id="stagesList" style="margin-top:10px;"></div>
-  </div>
-
-  <!-- منطقة الأسئلة (لا تُمسح أبدًا - تخفى وتظهر فقط) -->
-  <div id="quizArea" class="quiz-card hidden">
-    <button class="small-back" id="backToStagesBtn">🔙 رجوع للمراحل</button>
-    <div class="score-board" id="scoreDisplay">⭐ 0/0</div>
-    <div class="progress-wrap"><div class="progress-bar" id="progressBar" style="width:0%"></div></div>
-    <div class="question-text" id="questionText"></div>
-    <div class="question-ar" id="questionAr"></div>
-    <div id="optionsDiv"></div>
-    <div id="feedbackDiv"></div>
-    <div class="motivation" id="motivationQuiz" style="margin-top:15px;"></div>
-    <div class="nav-buttons">
-      <button class="nav-btn" id="prevBtn">◀ السابق</button>
-      <button class="nav-btn" id="nextBtn">التالي ▶</button>
-    </div>
-  </div>
-
-  <!-- شاشة النتيجة (منفصلة تمامًا عن منطقة الأسئلة) -->
-  <div id="resultsScreen" class="quiz-card hidden">
-    <button class="small-back" id="resultsBackBtn">🔙 رجوع للمراحل</button>
-    <div class="results-hero">
-      <h2 id="resultsTitle">🎉 انتهت المرحلة</h2>
-      <p id="resultsScore" style="font-size:20px; margin:10px 0;"></p>
-      <p id="resultsMsg" style="color:#b45309;"></p>
-    </div>
-    <div class="mistakes-box" id="mistakesBox"></div>
-    <div style="text-align:center; margin-top:15px;">
-      <button class="main-btn" id="replayBtn">🔁 إعادة نفس المرحلة</button>
-      <button class="main-btn" id="nextStageBtn">⏭️ المرحلة التالية</button>
-    </div>
-  </div>
-
-</div>
-
+<div class="eyebrow">✨ Made for Osman ✨</div>
+<main class="card">
+  <h1 class="title">نسا وتوليد: الفصل الأول</h1>
+  <div class="fact">80 سؤال</div>
+  <p class="intro">كويز تفاعلي على تشريح الجهاز التناسلي الأنثوي والدورة الشهرية، من بنك أسئلة الفصل الأول. الأسئلة مقسّمة مراحل، وتقدّمك بيتحفظ على جهازك وتكمل من حيث وقفت.</p>
+  <img class="hero" src="hero.jpg" alt="رسم توضيحي لموضوع تمريض النسا والتوليد">
+  <div class="caption">رسم توضيحي للموضوع، مش صورة من المصدر.</div>
+  <div id="app"></div>
+  <div class="closing">بنك أسئلة الفصل الأول من مذكرة النسا والتوليد، 80 سؤالًا. التقدم بيتحفظ على جهازك بس، ومفيش حاجة بتتبعت من الصفحة دي.</div>
+</main>
 <script>
-// ===== True/False: 46 questions (OB ch.1) =====
-const tfData = [
-{en:"If the Oocyte is fertilized, the corpus luteum remains active for 20 weeks of gestation.",ar:"إذا تم تخصيب البويضة، يبقى الجسم الأصفر نشطًا لمدة 20 أسبوعًا من الحمل",c:true,ex:"عند حدوث التخصيب يظل الجسم الأصفر نشطًا بفعل هرمون HCG لإفراز البروجسترون الداعم للحمل، ويستمر نشطًا حوالي 20 أسبوعًا."},
-{en:"Secretory phase begins with menstruation and ends with ovulation.",ar:"تبدأ المرحلة الإفرازية مع الحيض وتنتهي بالإباضة",c:false,ex:"تصحيح: المرحلة الإفرازية تبدأ بالإباضة وتنتهي مع الحيض، فهي النصف الثاني من الدورة تحت تأثير البروجسترون."},
-{en:"Skene's ducts open on either side of the vaginal orifice.",ar:"تفتح قنوات سكين على جانبي فتحة المهبل",c:false,ex:"تصحيح: قنوات سكين تفتح على جانبي فتحة الإحليل (urethral) وليس فتحة المهبل."},
-{en:"The uterus is composed of three layers.",ar:"يتكون الرحم من ثلاث طبقات",c:true,ex:"الرحم يتكون من ثلاث طبقات: البطانة (endometrium) والعضلة (myometrium) والغلاف المصلي (perimetrium)."},
-{en:"Vitamin B metabolizes the excessive amounts of estrogen.",ar:"يستقلب فيتامين ب الكميات الزائدة من هرمون الاستروجين",c:false,ex:"تصحيح: فيتامين ب يحيّد (neutralizes) الكميات الزائدة من الإستروجين وليس يستقلبها (metabolizes)."},
-{en:"Vestibule has a specific shape.",ar:"يأخذ الدهليز شكلا محددًا",c:true,ex:"صحيح كما هو مثبت في الكتاب (مع ملاحظة مكتوبة «عليه خلاف»): الدهليز له شكل محدد يشبه القارب."},
-{en:"Isthmus is the widest portion of the fallopian tube.",ar:"البرزخ هو أوسع جزء من قناة فالوب",c:false,ex:"تصحيح: البرزخ هو أضيق (narrowest) جزء من قناة فالوب، أما الأوسع فهو الأمبولة."},
-{en:"The perineum is the muscle and tissue located between the vaginal opening and anal canal.",ar:"العجان هو العضلات والأنسجة الواقعة بين فتحة المهبل والقناة الشرجية",c:true,ex:"العجان هو العضلات والأنسجة الواقعة بين فتحة المهبل والقناة الشرجية."},
-{en:"The female reproductive cycle is composed only of the ovarian cycle.",ar:"تتكون الدورة التناسلية للأنثى من الدورة المبيضية فقط",c:false,ex:"تصحيح: الدورة التناسلية للأنثى تتكون من الدورة الشهرية (menstrual) والدورة المبيضية (ovarian) معًا."},
-{en:"The urethral meatus is situated 5 cm below the clitoris.",ar:"يقع مخرج الإحليل على بعد 5 سم أسفل البظر",c:false,ex:"تصحيح: مخرج الإحليل يقع على بعد 2.5 سم أسفل البظر وليس 5 سم."},
-{en:"The most common elements of reproductive health include women's nutrition, infertility management, and family planning services.",ar:"تشمل العناصر الشائعة لصحة الإنجاب تغذية النساء وإدارة العقم وخدمات تنظيم الأسرة",c:true,ex:"من أشهر عناصر الصحة الإنجابية: تغذية المرأة، إدارة العقم، وخدمات تنظيم الأسرة."},
-{en:"The upper rounded portion of the uterus is called the fundus.",ar:"يسمى الجزء العلوي المستدير من الرحم بقاع الرحم",c:true,ex:"الجزء العلوي المستدير من الرحم هو القاع (fundus)."},
-{en:"The placenta secretes follicle-stimulating hormone (FSH) and luteinizing hormone (LH).",ar:"تفرز المشيمة هرمون تحفيز الجريب وهرمون التبويض",c:false,ex:"تصحيح: FSH وLH يُفرزان من الغدة النخامية (pituitary gland) وليس من المشيمة."},
-{en:"The area between the vaginal opening and anus is called labia minora.",ar:"المنطقة بين فتحة المهبل وفتحة الشرج تسمى الشفرين الصغيرين",c:false,ex:"تصحيح: المنطقة بين فتحة المهبل والشرج تسمى العجان (perineum) وليس الشفرين الصغيرين."},
-{en:"The widest part of the fallopian tube is called cilia.",ar:"أوسع جزء من قناة فالوب يسمى الأهداب",c:false,ex:"تصحيح: أوسع جزء من قناة فالوب هو الأمبولة (ampulla)، أما الأهداب فزوائد مبطنة للقناة تساعد على تحريك البويضة."},
-{en:"Episiotomy is an incision of the perineum for widening the vaginal opening.",ar:"شق العجان هو شق في العجان لتوسيع فتحة المهبل",c:true,ex:"شق العجان (episiotomy) شق جراحي في العجان لتوسيع فتحة المهبل أثناء الولادة."},
-{en:"The female sex hormone is testosterone.",ar:"الهرمون الجنسي الأنثوي هو التستوستيرون",c:false,ex:"تصحيح: الهرمونات الجنسية الأنثوية هي الإستروجين والبروجسترون، أما التستوستيرون فهرمون ذكري أساسًا."},
-{en:"The uterus is a pear-shaped organ.",ar:"الرحم هو عضو على شكل كمثرى",c:true,ex:"الرحم عضو مجوف على شكل ثمرة الكمثرى (pear-shaped)."},
-{en:"The hypothalamus releases GnRH, and the pituitary secretes estrogen.",ar:"يفرز الوطاء هرمون GnRH والغدة النخامية تفرز الاستروجين",c:false,ex:"تصحيح: الغدة النخامية تفرز FSH وLH، أما الإستروجين فيُفرز من المبيض."},
-{en:"One strategy for improving reproductive health is to delay early marriage.",ar:"إحدى استراتيجيات تحسين الصحة الإنجابية هي تأخير الزواج المبكر",c:true,ex:"تأخير الزواج المبكر من استراتيجيات تحسين الصحة الإنجابية."},
-{en:"Implantation begins 4 days after fertilization.",ar:"يبدأ الانغراس بعد 4 أيام من التخصيب",c:false,ex:"تصحيح: الانغراس يبدأ بعد حوالي 6 أيام من التخصيب وليس 4 أيام."},
-{en:"The proliferative phase is a phase of repair and proliferation.",ar:"المرحلة التكاثرية هي مرحلة الإصلاح والتكاثر",c:true,ex:"المرحلة التكاثرية هي مرحلة إصلاح بطانة الرحم وتكاثرها تحت تأثير الإستروجين."},
-{en:"Ovulation is the expulsion of a mature ovum.",ar:"الإباضة هي طرد بويضة ناضجة",c:true,ex:"الإباضة هي خروج (طرد) البويضة الناضجة من الجريب."},
-{en:"The clitoris is not a sensitive organ.",ar:"البظر ليس عضوًا حساسًا",c:false,ex:"تصحيح: البظر عضو حساس (sensitive) جدًا لغناه بالنهايات العصبية."},
-{en:"The upper part of the uterus is called the isthmus.",ar:"الجزء العلوي من الرحم يسمى البرزخ",c:false,ex:"تصحيح: الجزء العلوي من الرحم هو القاع (fundus)، أما البرزخ فمنطقة ضيقة أسفل جسم الرحم."},
-{en:"FSH and LH produce cyclic changes in the ovaries.",ar:"يؤدي هرمونا FSH وLH إلى تغييرات دورية في المبيضين",c:true,ex:"FSH وLH يسببان التغيرات الدورية في المبيضين: نضج الجريب ثم الإباضة."},
-{en:"The vagina connects the cervix to the external genitalia.",ar:"يربط المهبل بين عنق الرحم والأعضاء التناسلية الخارجية",c:true,ex:"المهبل يربط عنق الرحم بالأعضاء التناسلية الخارجية."},
-{en:"The vagina is a passageway for menstrual flow.",ar:"المهبل هو ممر لتدفق الحيض",c:true,ex:"المهبل هو الممر الذي يخرج منه دم الحيض."},
-{en:"The menstrual cycle contains the luteal phase.",ar:"تحتوي الدورة الشهرية على المرحلة الأصفرية",c:false,ex:"تصحيح: الطور الأصفر (luteal) جزء من الدورة المبيضية (ovarian cycle) وليس الدورة الشهرية."},
-{en:"The proliferative phase is controlled by estrogen secreted by follicles.",ar:"يتم التحكم في المرحلة التكاثرية بواسطة الاستروجين الذي تفرزه الجريبات",c:true,ex:"المرحلة التكاثرية تحت تأثير الإستروجين المفرز من الجريبات النامية."},
-{en:"The Pituitary hormone that stimulates the ovary at the start of menstrual cycle is Luteinizing hormone (L.H).",ar:"الهرمون النخامي الذي يحفز المبيض في بداية الدورة الشهرية هو الهرمون الملوتن (LH)",c:false,ex:"تصحيح: الهرمون المحفز للمبيض في بداية الدورة هو هرمون تحفيز الجريب FSH وليس LH."},
-{en:"The labia minora lie just inside the labia majora and surround the openings of vagina & urethra.",ar:"الشفران الصغيران يقعان داخل الشفرين الكبيرين ويحيطان بفتحات المهبل والإحليل",c:true,ex:"الشفران الصغيران يقعان مباشرة داخل الشفرين الكبيرين ويحيطان بفتحتي المهبل والإحليل."},
-{en:"Infundibulum is the part of fallopian tube that fertilization takes place.",ar:"القمع هو الجزء من قناة فالوب الذي يحدث فيه الإخصاب",c:false,ex:"تصحيح: الإخصاب يحدث في الأمبولة (ampulla) وليس في القمع (infundibulum)."},
-{en:"Bartholin's glands are located on either side of urethral meatus.",ar:"غدد بارثولين تقع على جانبي فتحة الإحليل",c:false,ex:"تصحيح: غدد بارثولين تقع على جانبي فتحة المهبل (vaginal orifice) وليس الإحليل."},
-{en:"Isthmus is the part of fallopian tube that acts as reservoir for spermatozoa.",ar:"البرزخ هو الجزء من قناة فالوب الذي يعمل كمستودع للحيوانات المنوية",c:true,ex:"البرزخ يعمل كمستودع للحيوانات المنوية قبل حدوث الإخصاب."},
-{en:"Bartholin's glands secretes thick mucus that supplies lubrication for intercourse and enhances the viability and motility of the sperm.",ar:"غدد بارثولين تفرز مخاطًا كثيفًا يوفر التزييت أثناء الجماع ويعزز حيوية وحركة الحيوانات المنوية",c:true,ex:"إفراز غدد بارثولين يرطّب ويزيّت أثناء الجماع ويعزز حيوية وحركة الحيوانات المنوية."},
-{en:"The female reproductive cycle composed of menstrual cycle only.",ar:"دورة الجهاز التناسلي للأنثى تتكون من الدورة الشهرية فقط",c:false,ex:"تصحيح: الدورة التناسلية للأنثى تتكون من الدورة الشهرية والدورة المبيضية معًا."},
-{en:"During proliferative phase spiral arteries grow into the superficial layer.",ar:"خلال المرحلة التكاثرية، تنمو الشرايين الحلزونية في الطبقة السطحية",c:false,ex:"تصحيح: نمو الشرايين الحلزونية في الطبقة السطحية يحدث في المرحلة الإفرازية (secretory) وليس التكاثرية."},
-{en:"From reproductive health rights; right to life, liberty and security.",ar:"من حقوق الصحة الإنجابية: الحق في الحياة، الحرية والأمان",c:true,ex:"من حقوق الصحة الإنجابية: الحق في الحياة والحرية والأمان."},
-{en:"Using any form of warm application may be beneficial during painful periods of menstruation.",ar:"استخدام أي شكل من أشكال الكمادات الدافئة قد يكون مفيدًا خلال فترات الحيض المؤلمة",c:true,ex:"الكمادات الدافئة تخفف آلام الحيض وتساعد على ارتخاء العضلات."},
-{en:"Vestibule is appear shape.",ar:"الدهليز له شكل محدد (القبو)",c:false,ex:"تصحيح: الدهليز له شكل القارب (boat shape)."},
-{en:"Zygote is the result of fertilization.",ar:"الزيجوت هو نتيجة الإخصاب",c:true,ex:"الزيجوت هو الخلية الناتجة من اتحاد البويضة مع الحيوان المنوي (صحيح)."},
-{en:"Immediately after fertilization the zygote has 47 chromosomes.",ar:"تحتوي الزيجوت على 47 كروموسوم",c:false,ex:"تصحيح: الزيجوت يحتوي على 46 كروموسوم (23 من الأم و23 من الأب) وليس 47."},
-{en:"If fertilization doesn't occur HCG hormone is secreted in urine.",ar:"إذا لم يحدث الإخصاب، يُفرز هرمون HCG في البول",c:false,ex:"تصحيح: عند عدم حدوث الإخصاب لا يُفرز هرمون HCG، لأنه يُفرز من الأرومة الغاذية بعد الانغراس فقط."},
-{en:"Normal site of implantation is in the endometrium of the anterior wall of the fundus of the uterus.",ar:"المكان الطبيعي لانغراس البويضة المخصبة هو بطانة الجدار الأمامي لقاع الرحم",c:true,ex:"المكان الطبيعي للانغراس هو بطانة الجدار الأمامي لقاع الرحم."},
-{en:"Ovulation occurs about the end of the cycle.",ar:"يحدث التبويض تقريبًا في نهاية الدورة",c:false,ex:"تصحيح: التبويض يحدث حول منتصف الدورة (around mid-cycle) وليس في نهايتها."}
-];
-// ===== MCQ: 34 questions (OB ch.1) =====
-// Each option: [English, Arabic gloss]. correct = option index.
-const mcqData = [
-{en:"The female internal reproductive organs include:",ar:"تشمل الأعضاء التناسلية الداخلية للأنثى:",o:[["Ovaries, fallopian tubes, clitoris","المبايض، قناتا فالوب، البظر"],["Ovaries, vestibule, Bartholin's glands","المبايض، الدهليز، غدد بارثولين"],["Fallopian tubes, ovaries, vagina","قناتا فالوب، المبايض، المهبل"],["Fallopian tubes, uterus, vagina, and ovaries","قناتا فالوب، الرحم، المهبل، والمبايض"]],c:3,ex:"الأعضاء التناسلية الداخلية للأنثى هي: المبيضان وقناتا فالوب والرحم والمهبل؛ أما البظر والدهليز وغدد بارثولين فأعضاء خارجية."},
-{en:"If fertilization doesn't occur:",ar:"إذا لم يحدث الإخصاب:",o:[["Corpus luteum degenerates","الجسم الأصفر يتدهور"],["Menstruation occurs","يحدث الحيض"],["Estrogen & progesterone levels fall","تنخفض مستويات الإستروجين والبروجسترون"],["All the above","جميع ما سبق"]],c:3,ex:"عند عدم حدوث الإخصاب يتحلل الجسم الأصفر فتنخفض مستويات الإستروجين والبروجسترون ويحدث الحيض؛ لذلك جميع ما سبق."},
-{en:"Divisions of the uterus include all the following except:",ar:"تشمل تقسيمات الرحم جميع ما يلي باستثناء:",o:[["The corpus or body","الجسم أو البدن"],["Ampulla","الأمبولة"],["The fundus","القاع"],["The cavity","التجويف"]],c:1,ex:"الأمبولة جزء من قناة فالوب وليست من تقسيمات الرحم؛ الرحم ينقسم إلى القاع والجسم والتجويف."},
-{en:"The parts of the fallopian tube include all of the following except:",ar:"تشمل أجزاء قناة فالوب جميع ما يلي باستثناء:",o:[["Ampulla","الأمبولة"],["Endometrium","بطانة الرحم"],["Isthmus","البرزخ"],["Interstitial","الجزء الداخلي"]],c:1,ex:"بطانة الرحم (endometrium) طبقة من جدار الرحم وليست جزءًا من قناة فالوب."},
-{en:"The functions of ovaries include secretion of:",ar:"تشمل وظائف المبايض إفراز:",o:[["Estrogen and progesterone hormones","هرموني الإستروجين والبروجسترون"],["LH hormone","هرمون LH"],["Follicle stimulating hormone (FSH)","هرمون FSH"],["Prolactin hormone","هرمون البرولاكتين"]],c:0,ex:"المبيضان يفرزان الإستروجين والبروجسترون؛ أما LH وFSH والبرولاكتين فتفرز من الغدة النخامية."},
-{en:"The external female genitalia are the following except:",ar:"تشمل الأعضاء التناسلية الخارجية للأنثى ما يلي باستثناء:",o:[["Mons pubis","جبل العانة"],["Uterus","الرحم"],["Labia major","الشفرين الكبيرين"],["Labia minora","الشفرين الصغيرين"]],c:1,ex:"الرحم عضو تناسلي داخلي وليس من الأعضاء التناسلية الخارجية."},
-{en:"Ovulation occurs:",ar:"يحدث التبويض:",o:[["At the beginning of the menstrual cycle","في بداية الدورة الشهرية"],["At the middle of the menstrual cycle","في منتصف الدورة الشهرية"],["At the end of the menstrual cycle","في نهاية الدورة الشهرية"]],c:1,ex:"الإباضة تحدث في منتصف الدورة الشهرية (حوالي اليوم 14 في دورة مدتها 28 يومًا)."},
-{en:"The ovarian hormones produced by the Graafian follicle and corpus luteum are:",ar:"الهرمونات المبيضية التي ينتجها جريب جراف والجسم الأصفر هي:",o:[["FSH and estrogen","FSH والاستروجين"],["FSH and LH","FSH وLH"],["Progesterone and gonadotropin","البروجسترون والجونادوتروبين"],["Estrogen and progesterone","الإستروجين والبروجسترون"]],c:3,ex:"جريب جراف يفرز الإستروجين والجسم الأصفر يفرز البروجسترون؛ وكلاهما هرمونان مبيضيان."},
-{en:"Ovulation usually occurs in a regular menstrual cycle at:",ar:"يحدث التبويض عادةً في دورة شهرية منتظمة في:",o:[["The 10th day","اليوم العاشر"],["The 8th day","اليوم الثامن"],["The 14th day","اليوم الرابع عشر"],["The 7th day","اليوم السابع"]],c:2,ex:"في الدورة المنتظمة (28 يومًا) تحدث الإباضة عادة في اليوم الرابع عشر."},
-{en:"Once the implantation taken place the endometrium called:",ar:"بمجرد حدوث الانغراس تُسمى بطانة الرحم:",o:[["Mesoderm","الطبقة الوسطية"],["Blastocyst","الكيسة الأريمية"],["Decidua","الغشاء الساقط"],["Morula","التوتة (المورولا)"]],c:2,ex:"بعد حدوث الانغراس تسمى بطانة الرحم الغشاء الساقط (decidua)."},
-{en:"The result of fertilization is a:",ar:"نتيجة الإخصاب هي:",o:[["Morula","المورولا"],["Zygote","الزيجوت"],["Decidua","الغشاء الساقط"],["Blastocyst","الكيسة الأريمية"]],c:1,ex:"نتيجة الإخصاب هي الزيجوت (البويضة المخصبة)."},
-{en:"Conception refers to:",ar:"الإخصاب (الحمل) يشير إلى:",o:[["The embedding of fertilized ovum into the endometrium","انغراس البويضة المخصبة في بطانة الرحم"],["The division of the zygote","انقسام الزيجوت"],["The union of the ovum and sperm","اتحاد البويضة والحيوان المنوي"],["The part of the tube in which fertilization occurs","جزء قناة فالوب الذي يحدث فيه الإخصاب"]],c:2,ex:"الـ conception يشير إلى اتحاد البويضة مع الحيوان المنوي."},
-{en:"Follicle stimulating hormone for:",ar:"هرمون منشط الجريب (FSH) مسؤول عن:",o:[["mature ovum","نضج البويضة"],["release ovum","إطلاق البويضة"]],c:0,ex:"FSH مسؤول عن نضج الجريب والبويضة، أما إطلاق البويضة (الإباضة) فيتم بفعل LH."},
-{en:"Ovulation phase occurs at:",ar:"مرحلة الإباضة تحدث في:",o:[["mid cycle","منتصف الدورة"],["end cycle","نهاية الدورة"]],c:0,ex:"طور الإباضة يحدث في منتصف الدورة وليس في نهايتها."},
-{en:"The hormones of the anterior pituitary gland that control ovulation are:",ar:"الهرمونات الصادرة من الغدة النخامية الأمامية التي تتحكم في الإباضة هي:",o:[["Luteinizing Hormone","الهرمون الملوتن LH"],["Follicle Stimulating Hormone","الهرمون المنشط للجريب FSH"],["Estrogen and Progesterone","الإستروجين والبروجسترون"],["a and b","أ و ب"]],c:3,ex:"الغدة النخامية الأمامية تفرز LH وFSH وكلاهما يتحكم في الإباضة."},
-{en:"functions of the vagina is include:",ar:"تشمل وظائف المهبل:",o:[["birth canal during delivery","قناة الولادة أثناء الوضع"],["passage way for menstrual flow","مجرى لخروج دم الحيض"],["For uterine secretions to pass down through the introitus","تسمح للسوائل الرحمية بالمرور عبر فتحة المهبل"],["all of the above","كل ما سبق"]],c:3,ex:"المهبل قناة الولادة وممر لدم الحيض وللإفرازات الرحمية؛ جميع ما سبق."},
-{en:"The progesterone is secreted by:",ar:"يُفرز هرمون البروجسترون بواسطة:",o:[["Graafian follicle","الجريب الجرافي"],["Anterior pituitary gland","الغدة النخامية الأمامية"],["corpus luteum","الجسم الأصفر"],["posterior pituitary gland","الغدة النخامية الخلفية"]],c:2,ex:"البروجسترون يُفرز بشكل أساسي من الجسم الأصفر (corpus luteum)."},
-{en:"The middle portion of the uterus is called:",ar:"يُسمى الجزء الأوسط من الرحم بـ:",o:[["Fundus","القاع"],["Body","الجسم"],["Cervix","عنق الرحم"],["All of the above","جميع ما سبق"]],c:1,ex:"الجزء الأوسط من الرحم هو الجسم (body): القاع أعلى، والعنق أسفل."},
-{en:"Which of the following statements is correct about menstruation?",ar:"أي من العبارات التالية صحيحة عن الحيض؟",o:[["The proliferative phase start from 15-28 days","تبدأ المرحلة التكاثرية من اليوم 15 إلى 28"],["Normal menstrual cycle occurs every 40 days","تحدث الدورة الشهرية الطبيعية كل 40 يومًا"],["Menstrual phase if pregnancy does not occur","تحدث مرحلة الحيض إذا لم يحدث حمل"],["The secretory phase from 5-14 days & it involves early proliferation of endometrium","المرحلة الإفرازية من اليوم 5 إلى 14 وتشمل التكاثر المبكر لبطانة الرحم"]],c:2,ex:"مرحلة الحيض تحدث إذا لم يحدث حمل؛ المرحلة التكاثرية من 5-14 والإفرازية من 15-28، والدورة الطبيعية كل 25-32 يومًا."},
-{en:"Which of the following statements is not correct about uterus:",ar:"أي من العبارات التالية غير صحيحة عن الرحم؟",o:[["Hallow muscular & thick-walled organ","عضو مجوف عضلي سميك الجدار"],["Its main functions are pregnancy & labor","وظائفه الرئيسية هي الحمل والولادة"],["Bladder is posterior while rectum is anterior","المثانة خلفية بينما المستقيم أمامي"],["Anatomically divided into: fundus, body & cervix","يُقسم تشريحيًا إلى: القاع، الجسم، وعنق الرحم"]],c:2,ex:"العبارة غير الصحيحة هي الثالثة: الصحيح أن المثانة أمامية (anterior) والمستقيم خلفي (posterior) بالنسبة للرحم."},
-{en:"All the following open into vaginal vestibule except:",ar:"كل ما يلي يفتح في الدهليز المهبلي ما عدا:",o:[["Cervical opening","فتحة عنق الرحم"],["Bartholin's glands","غدد بارثولين"],["Urethral meatus","فتحة الإحليل"],["vaginal opening","الفتحة المهبلية"]],c:0,ex:"فتحة عنق الرحم تفتح في المهبل نفسه وليس في الدهليز؛ أما فتحة المهبل والإحليل وقنوات غدد بارثولين فتفتح في الدهليز."},
-{en:"If fertilization doesn't occur, the corpus luteum degenerates at:",ar:"إذا لم يحدث إخصاب، فإن الجسم الأصفر يتحلل في:",o:[["6th day of cycle","اليوم السادس من الدورة"],["14th days of cycle","اليوم الرابع عشر من الدورة"],["22-24th days of cycle","من اليوم 22 إلى 24 من الدورة"],["1st day of cycle","اليوم الأول من الدورة"]],c:2,ex:"عند عدم حدوث الإخصاب يتحلل الجسم الأصفر حوالي اليوم 22-24 من الدورة."},
-{en:"During the menstrual cycle, the secretory phase is under the effect of:",ar:"خلال الدورة الشهرية، تكون المرحلة الإفرازية تحت تأثير:",o:[["L.H","هرمون اللوتين"],["Estrogen","الإستروجين"],["F.S.H","الهرمون المنبه للجريب"],["Progesterone","البروجسترون"],["Both b & d","كل من ب و د"]],c:4,ex:"المرحلة الإفرازية تحت تأثير الإستروجين والبروجسترون معًا (مع غلبة البروجسترون)."},
-{en:"The fallopian tubes composed of all of the following except:",ar:"تتكون قناتا فالوب من كل ما يلي ما عدا:",o:[["Interstitial part","الجزء البيني"],["Infundibulum","القمع"],["cervix","عنق الرحم"],["Ampulla","الأمبولة"]],c:2,ex:"عنق الرحم جزء من الرحم وليس من قناة فالوب؛ أجزاء القناة: الجزء البيني، البرزخ، الأمبولة، القمع."},
-{en:"The weight of non-gravida uterus ranges from:",ar:"يتراوح وزن الرحم غير الحامل من:",o:[["900-1000 gm",""],["50-60 gm",""],["20-30 gm",""],["80-90 gm",""]],c:1,ex:"وزن الرحم غير الحامل يتراوح بين 50 و60 جرامًا."},
-{en:"The ovulation, the outward expulsion of mature ovum, typically occurs around which day in 28 day menstrual cycle:",ar:"التبويض، وهو خروج البويضة الناضجة، يحدث عادةً في أي يوم من دورة شهرية مدتها 28 يومًا؟",o:[["Day 10","اليوم العاشر"],["Day 7","اليوم السابع"],["Day 28","اليوم الثامن والعشرون"],["Day 14","اليوم الرابع عشر"]],c:3,ex:"الإباضة تحدث عادة حوالي اليوم 14 في دورة مدتها 28 يومًا."},
-{en:"Menstrual cycle usually occurs every:",ar:"تحدث الدورة الشهرية عادةً كل:",o:[["20 to 25 days","من 20 إلى 25 يومًا"],["25 to 32 days","من 25 إلى 32 يومًا"],["35 to 40 days","من 35 إلى 40 يومًا"]],c:1,ex:"الدورة الشهرية الطبيعية تحدث عادة كل 25 إلى 32 يومًا."},
-{en:"Ovarian cycle includes all the following Except:",ar:"تشمل دورة المبيض كل ما يلي ما عدا:",o:[["Follicular phase","الطور الجريبي"],["Ischemic phase","الطور الإقفاري"],["Ovulatory phase","طور التبويض"],["Luteal phase","الطور الأصفري"]],c:1,ex:"الطور الإقفاري (ischemic) من أطوار الدورة الشهرية الرحمية وليس من الدورة المبيضية."},
-{en:"Menstrual cycle includes the following Except:",ar:"تشمل الدورة الشهرية كل ما يلي ما عدا:",o:[["Luteal phase","الطور الأصفري"],["Menstrual phase","طور الحيض"],["Secretory phase","الطور الإفرازي"],["Ischemic phase","الطور الإقفاري"]],c:0,ex:"الطور الأصفر (luteal) من أطوار الدورة المبيضية وليس من الدورة الشهرية؛ أطوار الدورة الشهرية: الحيض والتكاثري (والإفرازي والإقفاري)."},
-{en:"Women's reproductive health needs include all the following Except:",ar:"تشمل احتياجات الصحة الإنجابية للمرأة كل ما يلي ما عدا:",o:[["Keeping labor normal","الحفاظ على سير الولادة بصورة طبيعية"],["Pregnancy, childbirth & postnatal care","رعاية الحمل والولادة وما بعد الولادة"],["Protection against prostatic hypertrophy","الوقاية من تضخم البروستاتا"]],c:2,ex:"تضخم البروستاتا حالة تخص الرجال ولا علاقة لها بالصحة الإنجابية للمرأة."},
-{en:"Fertilization of a mature ovum occurs in:",ar:"يحدث إخصاب البويضة الناضجة في:",o:[["Uterus","الرحم"],["Ovary","المبيض"],["Ampulla of the fallopian tube","أمبولة قناة فالوب"],["Wall of the myometrium","جدار عضلة الرحم"]],c:2,ex:"إخصاب البويضة الناضجة يحدث في أمبولة قناة فالوب."},
-{en:"Repair of the endometrium layer takes place for 9 days after menstruation under the effect of estrogen and is called:",ar:"يحدث إصلاح طبقة بطانة الرحم لمدة 9 أيام بعد الحيض تحت تأثير هرمون الإستروجين ويُسمى:",o:[["Secretory phase","الطور الإفرازي"],["Proliferative phase","الطور التكاثري"],["Menstrual phase","طور الحيض"],["Follicular phase","الطور الجريبي"]],c:1,ex:"إصلاح بطانة الرحم بعد الحيض تحت تأثير الإستروجين هو المرحلة التكاثرية (proliferative)."},
-{en:"Which hormone is secreted by the syncytiotrophoblast to keep the corpus luteum active if fertilization occur:",ar:"أي هرمون يفرز من الطبقة الخارجية للمشيمة للحفاظ على الجسم الأصفر نشطًا إذا حدث إخصاب؟",o:[["follicle stimulating hormone (FSH)","الهرمون المنبه للجريب"],["luteinizing hormone (LH)","الهرمون اللوتيني"],["human chorionic gonadotropin (HCG)","هرمون الحمل HCG"],["oxytocin","الأوكسيتوسين"]],c:2,ex:"الأرومة الغاذية المزجية (syncytiotrophoblast) تفرز هرمون HCG للحفاظ على الجسم الأصفر نشطًا بعد الإخصاب."},
-{en:"Repair of the endometrial layer takes place for 9 days after menstruation under the effect of estrogen. This phase is called:",ar:"يحدث إصلاح طبقة بطانة الرحم لمدة 9 أيام بعد الحيض تحت تأثير هرمون الإستروجين. وتسمى هذه المرحلة:",o:[["Menstrual phase","مرحلة الحيض"],["Proliferative phase","المرحلة التكاثرية"],["Secretory phase","المرحلة الإفرازية"],["Ischemic phase","المرحلة الإقفارية"]],c:1,ex:"هذه هي المرحلة التكاثرية (proliferative phase)."}
-];
-// ===================== التقسيم لمراحل =====================
-const STAGES = {
-  tf:  [ [0,16], [16,31], [31,46] ],   // 46 سؤال صح/خطأ
-  mcq: [ [0,12], [12,23], [23,34] ]    // 34 سؤال اختيار
-};
-const TYPE_NAMES = { tf:"صح / خطأ", mcq:"اختر الإجابة" };
+const DATA = {"STAGES":{"tf":[[0,16],[16,31],[31,46]],"mcq":[[0,12],[12,23],[23,34]]},"PHRASES":["يلا يا بطل، سؤال ورا سؤال وهتخلصهم كلهم 💪","إنت جامد.. كمّل كده 🔥","غلط مش عيب، العيب إنك ماتحاولش 😉","كوباية شاي وكمل مذاكرة ☕","الممرضات الجامدين بيذاكروا بالشكل ده 👏","ركز.. الإجابة أقرب من ما تتخيل 🎯","كل سؤال بتحله بيقرّبك من الامتياز 🌟","يا دكتور المستقبل، شد حيلك 🩺","مفيش مستحيل.. النسا والتوليد هتتقفل معاك ✅","خد نفس عميق.. إنت فاهم المادة كويس 😌","واحد واحد على البنك وهتلاقيه خلص 🏁","اللي جابك لهنا يوصّلك للآخر 🚀"],"tfData":[{"en":"If the Oocyte is fertilized, the corpus luteum remains active for 20 weeks of gestation.","ar":"إذا تم تخصيب البويضة، يبقى الجسم الأصفر نشطًا لمدة 20 أسبوعًا من الحمل","c":true,"ex":"عند حدوث التخصيب يظل الجسم الأصفر نشطًا بفعل هرمون HCG لإفراز البروجسترون الداعم للحمل، ويستمر نشطًا حوالي 20 أسبوعًا."},{"en":"Secretory phase begins with menstruation and ends with ovulation.","ar":"تبدأ المرحلة الإفرازية مع الحيض وتنتهي بالإباضة","c":false,"ex":"تصحيح: المرحلة الإفرازية تبدأ بالإباضة وتنتهي مع الحيض، فهي النصف الثاني من الدورة تحت تأثير البروجسترون."},{"en":"Skene's ducts open on either side of the vaginal orifice.","ar":"تفتح قنوات سكين على جانبي فتحة المهبل","c":false,"ex":"تصحيح: قنوات سكين تفتح على جانبي فتحة الإحليل (urethral) وليس فتحة المهبل."},{"en":"The uterus is composed of three layers.","ar":"يتكون الرحم من ثلاث طبقات","c":true,"ex":"الرحم يتكون من ثلاث طبقات: البطانة (endometrium) والعضلة (myometrium) والغلاف المصلي (perimetrium)."},{"en":"Vitamin B metabolizes the excessive amounts of estrogen.","ar":"يستقلب فيتامين ب الكميات الزائدة من هرمون الاستروجين","c":false,"ex":"تصحيح: فيتامين ب يحيّد (neutralizes) الكميات الزائدة من الإستروجين وليس يستقلبها (metabolizes)."},{"en":"Vestibule has a specific shape.","ar":"يأخذ الدهليز شكلا محددًا","c":true,"ex":"صحيح كما هو مثبت في الكتاب (مع ملاحظة مكتوبة «عليه خلاف»): الدهليز له شكل محدد يشبه القارب."},{"en":"Isthmus is the widest portion of the fallopian tube.","ar":"البرزخ هو أوسع جزء من قناة فالوب","c":false,"ex":"تصحيح: البرزخ هو أضيق (narrowest) جزء من قناة فالوب، أما الأوسع فهو الأمبولة."},{"en":"The perineum is the muscle and tissue located between the vaginal opening and anal canal.","ar":"العجان هو العضلات والأنسجة الواقعة بين فتحة المهبل والقناة الشرجية","c":true,"ex":"العجان هو العضلات والأنسجة الواقعة بين فتحة المهبل والقناة الشرجية."},{"en":"The female reproductive cycle is composed only of the ovarian cycle.","ar":"تتكون الدورة التناسلية للأنثى من الدورة المبيضية فقط","c":false,"ex":"تصحيح: الدورة التناسلية للأنثى تتكون من الدورة الشهرية (menstrual) والدورة المبيضية (ovarian) معًا."},{"en":"The urethral meatus is situated 5 cm below the clitoris.","ar":"يقع مخرج الإحليل على بعد 5 سم أسفل البظر","c":false,"ex":"تصحيح: مخرج الإحليل يقع على بعد 2.5 سم أسفل البظر وليس 5 سم."},{"en":"The most common elements of reproductive health include women's nutrition, infertility management, and family planning services.","ar":"تشمل العناصر الشائعة لصحة الإنجاب تغذية النساء وإدارة العقم وخدمات تنظيم الأسرة","c":true,"ex":"من أشهر عناصر الصحة الإنجابية: تغذية المرأة، إدارة العقم، وخدمات تنظيم الأسرة."},{"en":"The upper rounded portion of the uterus is called the fundus.","ar":"يسمى الجزء العلوي المستدير من الرحم بقاع الرحم","c":true,"ex":"الجزء العلوي المستدير من الرحم هو القاع (fundus)."},{"en":"The placenta secretes follicle-stimulating hormone (FSH) and luteinizing hormone (LH).","ar":"تفرز المشيمة هرمون تحفيز الجريب وهرمون التبويض","c":false,"ex":"تصحيح: FSH وLH يُفرزان من الغدة النخامية (pituitary gland) وليس من المشيمة."},{"en":"The area between the vaginal opening and anus is called labia minora.","ar":"المنطقة بين فتحة المهبل وفتحة الشرج تسمى الشفرين الصغيرين","c":false,"ex":"تصحيح: المنطقة بين فتحة المهبل والشرج تسمى العجان (perineum) وليس الشفرين الصغيرين."},{"en":"The widest part of the fallopian tube is called cilia.","ar":"أوسع جزء من قناة فالوب يسمى الأهداب","c":false,"ex":"تصحيح: أوسع جزء من قناة فالوب هو الأمبولة (ampulla)، أما الأهداب فزوائد مبطنة للقناة تساعد على تحريك البويضة."},{"en":"Episiotomy is an incision of the perineum for widening the vaginal opening.","ar":"شق العجان هو شق في العجان لتوسيع فتحة المهبل","c":true,"ex":"شق العجان (episiotomy) شق جراحي في العجان لتوسيع فتحة المهبل أثناء الولادة."},{"en":"The female sex hormone is testosterone.","ar":"الهرمون الجنسي الأنثوي هو التستوستيرون","c":false,"ex":"تصحيح: الهرمونات الجنسية الأنثوية هي الإستروجين والبروجسترون، أما التستوستيرون فهرمون ذكري أساسًا."},{"en":"The uterus is a pear-shaped organ.","ar":"الرحم هو عضو على شكل كمثرى","c":true,"ex":"الرحم عضو مجوف على شكل ثمرة الكمثرى (pear-shaped)."},{"en":"The hypothalamus releases GnRH, and the pituitary secretes estrogen.","ar":"يفرز الوطاء هرمون GnRH والغدة النخامية تفرز الاستروجين","c":false,"ex":"تصحيح: الغدة النخامية تفرز FSH وLH، أما الإستروجين فيُفرز من المبيض."},{"en":"One strategy for improving reproductive health is to delay early marriage.","ar":"إحدى استراتيجيات تحسين الصحة الإنجابية هي تأخير الزواج المبكر","c":true,"ex":"تأخير الزواج المبكر من استراتيجيات تحسين الصحة الإنجابية."},{"en":"Implantation begins 4 days after fertilization.","ar":"يبدأ الانغراس بعد 4 أيام من التخصيب","c":false,"ex":"تصحيح: الانغراس يبدأ بعد حوالي 6 أيام من التخصيب وليس 4 أيام."},{"en":"The proliferative phase is a phase of repair and proliferation.","ar":"المرحلة التكاثرية هي مرحلة الإصلاح والتكاثر","c":true,"ex":"المرحلة التكاثرية هي مرحلة إصلاح بطانة الرحم وتكاثرها تحت تأثير الإستروجين."},{"en":"Ovulation is the expulsion of a mature ovum.","ar":"الإباضة هي طرد بويضة ناضجة","c":true,"ex":"الإباضة هي خروج (طرد) البويضة الناضجة من الجريب."},{"en":"The clitoris is not a sensitive organ.","ar":"البظر ليس عضوًا حساسًا","c":false,"ex":"تصحيح: البظر عضو حساس (sensitive) جدًا لغناه بالنهايات العصبية."},{"en":"The upper part of the uterus is called the isthmus.","ar":"الجزء العلوي من الرحم يسمى البرزخ","c":false,"ex":"تصحيح: الجزء العلوي من الرحم هو القاع (fundus)، أما البرزخ فمنطقة ضيقة أسفل جسم الرحم."},{"en":"FSH and LH produce cyclic changes in the ovaries.","ar":"يؤدي هرمونا FSH وLH إلى تغييرات دورية في المبيضين","c":true,"ex":"FSH وLH يسببان التغيرات الدورية في المبيضين: نضج الجريب ثم الإباضة."},{"en":"The vagina connects the cervix to the external genitalia.","ar":"يربط المهبل بين عنق الرحم والأعضاء التناسلية الخارجية","c":true,"ex":"المهبل يربط عنق الرحم بالأعضاء التناسلية الخارجية."},{"en":"The vagina is a passageway for menstrual flow.","ar":"المهبل هو ممر لتدفق الحيض","c":true,"ex":"المهبل هو الممر الذي يخرج منه دم الحيض."},{"en":"The menstrual cycle contains the luteal phase.","ar":"تحتوي الدورة الشهرية على المرحلة الأصفرية","c":false,"ex":"تصحيح: الطور الأصفر (luteal) جزء من الدورة المبيضية (ovarian cycle) وليس الدورة الشهرية."},{"en":"The proliferative phase is controlled by estrogen secreted by follicles.","ar":"يتم التحكم في المرحلة التكاثرية بواسطة الاستروجين الذي تفرزه الجريبات","c":true,"ex":"المرحلة التكاثرية تحت تأثير الإستروجين المفرز من الجريبات النامية."},{"en":"The Pituitary hormone that stimulates the ovary at the start of menstrual cycle is Luteinizing hormone (L.H).","ar":"الهرمون النخامي الذي يحفز المبيض في بداية الدورة الشهرية هو الهرمون الملوتن (LH)","c":false,"ex":"تصحيح: الهرمون المحفز للمبيض في بداية الدورة هو هرمون تحفيز الجريب FSH وليس LH."},{"en":"The labia minora lie just inside the labia majora and surround the openings of vagina & urethra.","ar":"الشفران الصغيران يقعان داخل الشفرين الكبيرين ويحيطان بفتحات المهبل والإحليل","c":true,"ex":"الشفران الصغيران يقعان مباشرة داخل الشفرين الكبيرين ويحيطان بفتحتي المهبل والإحليل."},{"en":"Infundibulum is the part of fallopian tube that fertilization takes place.","ar":"القمع هو الجزء من قناة فالوب الذي يحدث فيه الإخصاب","c":false,"ex":"تصحيح: الإخصاب يحدث في الأمبولة (ampulla) وليس في القمع (infundibulum)."},{"en":"Bartholin's glands are located on either side of urethral meatus.","ar":"غدد بارثولين تقع على جانبي فتحة الإحليل","c":false,"ex":"تصحيح: غدد بارثولين تقع على جانبي فتحة المهبل (vaginal orifice) وليس الإحليل."},{"en":"Isthmus is the part of fallopian tube that acts as reservoir for spermatozoa.","ar":"البرزخ هو الجزء من قناة فالوب الذي يعمل كمستودع للحيوانات المنوية","c":true,"ex":"البرزخ يعمل كمستودع للحيوانات المنوية قبل حدوث الإخصاب."},{"en":"Bartholin's glands secretes thick mucus that supplies lubrication for intercourse and enhances the viability and motility of the sperm.","ar":"غدد بارثولين تفرز مخاطًا كثيفًا يوفر التزييت أثناء الجماع ويعزز حيوية وحركة الحيوانات المنوية","c":true,"ex":"إفراز غدد بارثولين يرطّب ويزيّت أثناء الجماع ويعزز حيوية وحركة الحيوانات المنوية."},{"en":"The female reproductive cycle composed of menstrual cycle only.","ar":"دورة الجهاز التناسلي للأنثى تتكون من الدورة الشهرية فقط","c":false,"ex":"تصحيح: الدورة التناسلية للأنثى تتكون من الدورة الشهرية والدورة المبيضية معًا."},{"en":"During proliferative phase spiral arteries grow into the superficial layer.","ar":"خلال المرحلة التكاثرية، تنمو الشرايين الحلزونية في الطبقة السطحية","c":false,"ex":"تصحيح: نمو الشرايين الحلزونية في الطبقة السطحية يحدث في المرحلة الإفرازية (secretory) وليس التكاثرية."},{"en":"From reproductive health rights; right to life, liberty and security.","ar":"من حقوق الصحة الإنجابية: الحق في الحياة، الحرية والأمان","c":true,"ex":"من حقوق الصحة الإنجابية: الحق في الحياة والحرية والأمان."},{"en":"Using any form of warm application may be beneficial during painful periods of menstruation.","ar":"استخدام أي شكل من أشكال الكمادات الدافئة قد يكون مفيدًا خلال فترات الحيض المؤلمة","c":true,"ex":"الكمادات الدافئة تخفف آلام الحيض وتساعد على ارتخاء العضلات."},{"en":"Vestibule is appear shape.","ar":"الدهليز له شكل محدد (القبو)","c":false,"ex":"تصحيح: الدهليز له شكل القارب (boat shape)."},{"en":"Zygote is the result of fertilization.","ar":"الزيجوت هو نتيجة الإخصاب","c":true,"ex":"الزيجوت هو الخلية الناتجة من اتحاد البويضة مع الحيوان المنوي (صحيح)."},{"en":"Immediately after fertilization the zygote has 47 chromosomes.","ar":"تحتوي الزيجوت على 47 كروموسوم","c":false,"ex":"تصحيح: الزيجوت يحتوي على 46 كروموسوم (23 من الأم و23 من الأب) وليس 47."},{"en":"If fertilization doesn't occur HCG hormone is secreted in urine.","ar":"إذا لم يحدث الإخصاب، يُفرز هرمون HCG في البول","c":false,"ex":"تصحيح: عند عدم حدوث الإخصاب لا يُفرز هرمون HCG، لأنه يُفرز من الأرومة الغاذية بعد الانغراس فقط."},{"en":"Normal site of implantation is in the endometrium of the anterior wall of the fundus of the uterus.","ar":"المكان الطبيعي لانغراس البويضة المخصبة هو بطانة الجدار الأمامي لقاع الرحم","c":true,"ex":"المكان الطبيعي للانغراس هو بطانة الجدار الأمامي لقاع الرحم."},{"en":"Ovulation occurs about the end of the cycle.","ar":"يحدث التبويض تقريبًا في نهاية الدورة","c":false,"ex":"تصحيح: التبويض يحدث حول منتصف الدورة (around mid-cycle) وليس في نهايتها."}],"mcqData":[{"en":"The female internal reproductive organs include:","ar":"تشمل الأعضاء التناسلية الداخلية للأنثى:","o":[["Ovaries, fallopian tubes, clitoris","المبايض، قناتا فالوب، البظر"],["Ovaries, vestibule, Bartholin's glands","المبايض، الدهليز، غدد بارثولين"],["Fallopian tubes, ovaries, vagina","قناتا فالوب، المبايض، المهبل"],["Fallopian tubes, uterus, vagina, and ovaries","قناتا فالوب، الرحم، المهبل، والمبايض"]],"c":3,"ex":"الأعضاء التناسلية الداخلية للأنثى هي: المبيضان وقناتا فالوب والرحم والمهبل؛ أما البظر والدهليز وغدد بارثولين فأعضاء خارجية."},{"en":"If fertilization doesn't occur:","ar":"إذا لم يحدث الإخصاب:","o":[["Corpus luteum degenerates","الجسم الأصفر يتدهور"],["Menstruation occurs","يحدث الحيض"],["Estrogen & progesterone levels fall","تنخفض مستويات الإستروجين والبروجسترون"],["All the above","جميع ما سبق"]],"c":3,"ex":"عند عدم حدوث الإخصاب يتحلل الجسم الأصفر فتنخفض مستويات الإستروجين والبروجسترون ويحدث الحيض؛ لذلك جميع ما سبق."},{"en":"Divisions of the uterus include all the following except:","ar":"تشمل تقسيمات الرحم جميع ما يلي باستثناء:","o":[["The corpus or body","الجسم أو البدن"],["Ampulla","الأمبولة"],["The fundus","القاع"],["The cavity","التجويف"]],"c":1,"ex":"الأمبولة جزء من قناة فالوب وليست من تقسيمات الرحم؛ الرحم ينقسم إلى القاع والجسم والتجويف."},{"en":"The parts of the fallopian tube include all of the following except:","ar":"تشمل أجزاء قناة فالوب جميع ما يلي باستثناء:","o":[["Ampulla","الأمبولة"],["Endometrium","بطانة الرحم"],["Isthmus","البرزخ"],["Interstitial","الجزء الداخلي"]],"c":1,"ex":"بطانة الرحم (endometrium) طبقة من جدار الرحم وليست جزءًا من قناة فالوب."},{"en":"The functions of ovaries include secretion of:","ar":"تشمل وظائف المبايض إفراز:","o":[["Estrogen and progesterone hormones","هرموني الإستروجين والبروجسترون"],["LH hormone","هرمون LH"],["Follicle stimulating hormone (FSH)","هرمون FSH"],["Prolactin hormone","هرمون البرولاكتين"]],"c":0,"ex":"المبيضان يفرزان الإستروجين والبروجسترون؛ أما LH وFSH والبرولاكتين فتفرز من الغدة النخامية."},{"en":"The external female genitalia are the following except:","ar":"تشمل الأعضاء التناسلية الخارجية للأنثى ما يلي باستثناء:","o":[["Mons pubis","جبل العانة"],["Uterus","الرحم"],["Labia major","الشفرين الكبيرين"],["Labia minora","الشفرين الصغيرين"]],"c":1,"ex":"الرحم عضو تناسلي داخلي وليس من الأعضاء التناسلية الخارجية."},{"en":"Ovulation occurs:","ar":"يحدث التبويض:","o":[["At the beginning of the menstrual cycle","في بداية الدورة الشهرية"],["At the middle of the menstrual cycle","في منتصف الدورة الشهرية"],["At the end of the menstrual cycle","في نهاية الدورة الشهرية"]],"c":1,"ex":"الإباضة تحدث في منتصف الدورة الشهرية (حوالي اليوم 14 في دورة مدتها 28 يومًا)."},{"en":"The ovarian hormones produced by the Graafian follicle and corpus luteum are:","ar":"الهرمونات المبيضية التي ينتجها جريب جراف والجسم الأصفر هي:","o":[["FSH and estrogen","FSH والاستروجين"],["FSH and LH","FSH وLH"],["Progesterone and gonadotropin","البروجسترون والجونادوتروبين"],["Estrogen and progesterone","الإستروجين والبروجسترون"]],"c":3,"ex":"جريب جراف يفرز الإستروجين والجسم الأصفر يفرز البروجسترون؛ وكلاهما هرمونان مبيضيان."},{"en":"Ovulation usually occurs in a regular menstrual cycle at:","ar":"يحدث التبويض عادةً في دورة شهرية منتظمة في:","o":[["The 10th day","اليوم العاشر"],["The 8th day","اليوم الثامن"],["The 14th day","اليوم الرابع عشر"],["The 7th day","اليوم السابع"]],"c":2,"ex":"في الدورة المنتظمة (28 يومًا) تحدث الإباضة عادة في اليوم الرابع عشر."},{"en":"Once the implantation taken place the endometrium called:","ar":"بمجرد حدوث الانغراس تُسمى بطانة الرحم:","o":[["Mesoderm","الطبقة الوسطية"],["Blastocyst","الكيسة الأريمية"],["Decidua","الغشاء الساقط"],["Morula","التوتة (المورولا)"]],"c":2,"ex":"بعد حدوث الانغراس تسمى بطانة الرحم الغشاء الساقط (decidua)."},{"en":"The result of fertilization is a:","ar":"نتيجة الإخصاب هي:","o":[["Morula","المورولا"],["Zygote","الزيجوت"],["Decidua","الغشاء الساقط"],["Blastocyst","الكيسة الأريمية"]],"c":1,"ex":"نتيجة الإخصاب هي الزيجوت (البويضة المخصبة)."},{"en":"Conception refers to:","ar":"الإخصاب (الحمل) يشير إلى:","o":[["The embedding of fertilized ovum into the endometrium","انغراس البويضة المخصبة في بطانة الرحم"],["The division of the zygote","انقسام الزيجوت"],["The union of the ovum and sperm","اتحاد البويضة والحيوان المنوي"],["The part of the tube in which fertilization occurs","جزء قناة فالوب الذي يحدث فيه الإخصاب"]],"c":2,"ex":"الـ conception يشير إلى اتحاد البويضة مع الحيوان المنوي."},{"en":"Follicle stimulating hormone for:","ar":"هرمون منشط الجريب (FSH) مسؤول عن:","o":[["mature ovum","نضج البويضة"],["release ovum","إطلاق البويضة"]],"c":0,"ex":"FSH مسؤول عن نضج الجريب والبويضة، أما إطلاق البويضة (الإباضة) فيتم بفعل LH."},{"en":"Ovulation phase occurs at:","ar":"مرحلة الإباضة تحدث في:","o":[["mid cycle","منتصف الدورة"],["end cycle","نهاية الدورة"]],"c":0,"ex":"طور الإباضة يحدث في منتصف الدورة وليس في نهايتها."},{"en":"The hormones of the anterior pituitary gland that control ovulation are:","ar":"الهرمونات الصادرة من الغدة النخامية الأمامية التي تتحكم في الإباضة هي:","o":[["Luteinizing Hormone","الهرمون الملوتن LH"],["Follicle Stimulating Hormone","الهرمون المنشط للجريب FSH"],["Estrogen and Progesterone","الإستروجين والبروجسترون"],["a and b","أ و ب"]],"c":3,"ex":"الغدة النخامية الأمامية تفرز LH وFSH وكلاهما يتحكم في الإباضة."},{"en":"functions of the vagina is include:","ar":"تشمل وظائف المهبل:","o":[["birth canal during delivery","قناة الولادة أثناء الوضع"],["passage way for menstrual flow","مجرى لخروج دم الحيض"],["For uterine secretions to pass down through the introitus","تسمح للسوائل الرحمية بالمرور عبر فتحة المهبل"],["all of the above","كل ما سبق"]],"c":3,"ex":"المهبل قناة الولادة وممر لدم الحيض وللإفرازات الرحمية؛ جميع ما سبق."},{"en":"The progesterone is secreted by:","ar":"يُفرز هرمون البروجسترون بواسطة:","o":[["Graafian follicle","الجريب الجرافي"],["Anterior pituitary gland","الغدة النخامية الأمامية"],["corpus luteum","الجسم الأصفر"],["posterior pituitary gland","الغدة النخامية الخلفية"]],"c":2,"ex":"البروجسترون يُفرز بشكل أساسي من الجسم الأصفر (corpus luteum)."},{"en":"The middle portion of the uterus is called:","ar":"يُسمى الجزء الأوسط من الرحم بـ:","o":[["Fundus","القاع"],["Body","الجسم"],["Cervix","عنق الرحم"],["All of the above","جميع ما سبق"]],"c":1,"ex":"الجزء الأوسط من الرحم هو الجسم (body): القاع أعلى، والعنق أسفل."},{"en":"Which of the following statements is correct about menstruation?","ar":"أي من العبارات التالية صحيحة عن الحيض؟","o":[["The proliferative phase start from 15-28 days","تبدأ المرحلة التكاثرية من اليوم 15 إلى 28"],["Normal menstrual cycle occurs every 40 days","تحدث الدورة الشهرية الطبيعية كل 40 يومًا"],["Menstrual phase if pregnancy does not occur","تحدث مرحلة الحيض إذا لم يحدث حمل"],["The secretory phase from 5-14 days & it involves early proliferation of endometrium","المرحلة الإفرازية من اليوم 5 إلى 14 وتشمل التكاثر المبكر لبطانة الرحم"]],"c":2,"ex":"مرحلة الحيض تحدث إذا لم يحدث حمل؛ المرحلة التكاثرية من 5-14 والإفرازية من 15-28، والدورة الطبيعية كل 25-32 يومًا."},{"en":"Which of the following statements is not correct about uterus:","ar":"أي من العبارات التالية غير صحيحة عن الرحم؟","o":[["Hallow muscular & thick-walled organ","عضو مجوف عضلي سميك الجدار"],["Its main functions are pregnancy & labor","وظائفه الرئيسية هي الحمل والولادة"],["Bladder is posterior while rectum is anterior","المثانة خلفية بينما المستقيم أمامي"],["Anatomically divided into: fundus, body & cervix","يُقسم تشريحيًا إلى: القاع، الجسم، وعنق الرحم"]],"c":2,"ex":"العبارة غير الصحيحة هي الثالثة: الصحيح أن المثانة أمامية (anterior) والمستقيم خلفي (posterior) بالنسبة للرحم."},{"en":"All the following open into vaginal vestibule except:","ar":"كل ما يلي يفتح في الدهليز المهبلي ما عدا:","o":[["Cervical opening","فتحة عنق الرحم"],["Bartholin's glands","غدد بارثولين"],["Urethral meatus","فتحة الإحليل"],["vaginal opening","الفتحة المهبلية"]],"c":0,"ex":"فتحة عنق الرحم تفتح في المهبل نفسه وليس في الدهليز؛ أما فتحة المهبل والإحليل وقنوات غدد بارثولين فتفتح في الدهليز."},{"en":"If fertilization doesn't occur, the corpus luteum degenerates at:","ar":"إذا لم يحدث إخصاب، فإن الجسم الأصفر يتحلل في:","o":[["6th day of cycle","اليوم السادس من الدورة"],["14th days of cycle","اليوم الرابع عشر من الدورة"],["22-24th days of cycle","من اليوم 22 إلى 24 من الدورة"],["1st day of cycle","اليوم الأول من الدورة"]],"c":2,"ex":"عند عدم حدوث الإخصاب يتحلل الجسم الأصفر حوالي اليوم 22-24 من الدورة."},{"en":"During the menstrual cycle, the secretory phase is under the effect of:","ar":"خلال الدورة الشهرية، تكون المرحلة الإفرازية تحت تأثير:","o":[["L.H","هرمون اللوتين"],["Estrogen","الإستروجين"],["F.S.H","الهرمون المنبه للجريب"],["Progesterone","البروجسترون"],["Both b & d","كل من ب و د"]],"c":4,"ex":"المرحلة الإفرازية تحت تأثير الإستروجين والبروجسترون معًا (مع غلبة البروجسترون)."},{"en":"The fallopian tubes composed of all of the following except:","ar":"تتكون قناتا فالوب من كل ما يلي ما عدا:","o":[["Interstitial part","الجزء البيني"],["Infundibulum","القمع"],["cervix","عنق الرحم"],["Ampulla","الأمبولة"]],"c":2,"ex":"عنق الرحم جزء من الرحم وليس من قناة فالوب؛ أجزاء القناة: الجزء البيني، البرزخ، الأمبولة، القمع."},{"en":"The weight of non-gravida uterus ranges from:","ar":"يتراوح وزن الرحم غير الحامل من:","o":[["900-1000 gm",""],["50-60 gm",""],["20-30 gm",""],["80-90 gm",""]],"c":1,"ex":"وزن الرحم غير الحامل يتراوح بين 50 و60 جرامًا."},{"en":"The ovulation, the outward expulsion of mature ovum, typically occurs around which day in 28 day menstrual cycle:","ar":"التبويض، وهو خروج البويضة الناضجة، يحدث عادةً في أي يوم من دورة شهرية مدتها 28 يومًا؟","o":[["Day 10","اليوم العاشر"],["Day 7","اليوم السابع"],["Day 28","اليوم الثامن والعشرون"],["Day 14","اليوم الرابع عشر"]],"c":3,"ex":"الإباضة تحدث عادة حوالي اليوم 14 في دورة مدتها 28 يومًا."},{"en":"Menstrual cycle usually occurs every:","ar":"تحدث الدورة الشهرية عادةً كل:","o":[["20 to 25 days","من 20 إلى 25 يومًا"],["25 to 32 days","من 25 إلى 32 يومًا"],["35 to 40 days","من 35 إلى 40 يومًا"]],"c":1,"ex":"الدورة الشهرية الطبيعية تحدث عادة كل 25 إلى 32 يومًا."},{"en":"Ovarian cycle includes all the following Except:","ar":"تشمل دورة المبيض كل ما يلي ما عدا:","o":[["Follicular phase","الطور الجريبي"],["Ischemic phase","الطور الإقفاري"],["Ovulatory phase","طور التبويض"],["Luteal phase","الطور الأصفري"]],"c":1,"ex":"الطور الإقفاري (ischemic) من أطوار الدورة الشهرية الرحمية وليس من الدورة المبيضية."},{"en":"Menstrual cycle includes the following Except:","ar":"تشمل الدورة الشهرية كل ما يلي ما عدا:","o":[["Luteal phase","الطور الأصفري"],["Menstrual phase","طور الحيض"],["Secretory phase","الطور الإفرازي"],["Ischemic phase","الطور الإقفاري"]],"c":0,"ex":"الطور الأصفر (luteal) من أطوار الدورة المبيضية وليس من الدورة الشهرية؛ أطوار الدورة الشهرية: الحيض والتكاثري (والإفرازي والإقفاري)."},{"en":"Women's reproductive health needs include all the following Except:","ar":"تشمل احتياجات الصحة الإنجابية للمرأة كل ما يلي ما عدا:","o":[["Keeping labor normal","الحفاظ على سير الولادة بصورة طبيعية"],["Pregnancy, childbirth & postnatal care","رعاية الحمل والولادة وما بعد الولادة"],["Protection against prostatic hypertrophy","الوقاية من تضخم البروستاتا"]],"c":2,"ex":"تضخم البروستاتا حالة تخص الرجال ولا علاقة لها بالصحة الإنجابية للمرأة."},{"en":"Fertilization of a mature ovum occurs in:","ar":"يحدث إخصاب البويضة الناضجة في:","o":[["Uterus","الرحم"],["Ovary","المبيض"],["Ampulla of the fallopian tube","أمبولة قناة فالوب"],["Wall of the myometrium","جدار عضلة الرحم"]],"c":2,"ex":"إخصاب البويضة الناضجة يحدث في أمبولة قناة فالوب."},{"en":"Repair of the endometrium layer takes place for 9 days after menstruation under the effect of estrogen and is called:","ar":"يحدث إصلاح طبقة بطانة الرحم لمدة 9 أيام بعد الحيض تحت تأثير هرمون الإستروجين ويُسمى:","o":[["Secretory phase","الطور الإفرازي"],["Proliferative phase","الطور التكاثري"],["Menstrual phase","طور الحيض"],["Follicular phase","الطور الجريبي"]],"c":1,"ex":"إصلاح بطانة الرحم بعد الحيض تحت تأثير الإستروجين هو المرحلة التكاثرية (proliferative)."},{"en":"Which hormone is secreted by the syncytiotrophoblast to keep the corpus luteum active if fertilization occur:","ar":"أي هرمون يفرز من الطبقة الخارجية للمشيمة للحفاظ على الجسم الأصفر نشطًا إذا حدث إخصاب؟","o":[["follicle stimulating hormone (FSH)","الهرمون المنبه للجريب"],["luteinizing hormone (LH)","الهرمون اللوتيني"],["human chorionic gonadotropin (HCG)","هرمون الحمل HCG"],["oxytocin","الأوكسيتوسين"]],"c":2,"ex":"الأرومة الغاذية المزجية (syncytiotrophoblast) تفرز هرمون HCG للحفاظ على الجسم الأصفر نشطًا بعد الإخصاب."},{"en":"Repair of the endometrial layer takes place for 9 days after menstruation under the effect of estrogen. This phase is called:","ar":"يحدث إصلاح طبقة بطانة الرحم لمدة 9 أيام بعد الحيض تحت تأثير هرمون الإستروجين. وتسمى هذه المرحلة:","o":[["Menstrual phase","مرحلة الحيض"],["Proliferative phase","المرحلة التكاثرية"],["Secretory phase","المرحلة الإفرازية"],["Ischemic phase","المرحلة الإقفارية"]],"c":1,"ex":"هذه هي المرحلة التكاثرية (proliferative phase)."}]};
+const { STAGES, PHRASES, tfData, mcqData } = DATA;
+const TYPE_NAMES = { tf: 'صح / خطأ', mcq: 'اختر الإجابة' };
+const keyOf = (t, s) => t + '_' + s;
+const LS_KEY = 'ob-progress.v1';
 
-// ===================== عبارات تحفيزية =====================
-const PHRASES = [
-  "يلا يا بطل، سؤال ورا سؤال وهتخلصهم كلهم 💪",
-  "إنت جامد.. كمّل كده 🔥",
-  "غلط مش عيب، العيب إنك ماتحاولش 😉",
-  "كوباية شاي وكمل مذاكرة ☕",
-  "الممرضات الجامدين بيذاكروا بالشكل ده 👏",
-  "ركز.. الإجابة أقرب من ما تتخيل 🎯",
-  "كل سؤال بتحله بيقرّبك من الامتياز 🌟",
-  "يا دكتور المستقبل، شد حيلك 🩺",
-  "مفيش مستحيل.. النسا والتوليد هتتقفل معاك ✅",
-  "خد نفس عميق.. إنت فاهم المادة كويس 😌",
-  "واحد واحد على البنك وهتلاقيه خلص 🏁",
-  "اللي جابك لهنا يوصّلك للآخر 🚀"
-];
+let progress = {};
+try { progress = JSON.parse(localStorage.getItem(LS_KEY) || '{}') || {}; } catch (e) { progress = {}; }
+function persist() { try { localStorage.setItem(LS_KEY, JSON.stringify(progress)); } catch (e) {} }
 
-// ===================== أدوات =====================
-function shuffleArray(arr){ for(let i=arr.length-1;i>0;i--){ let j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; } return arr; }
-function $(id){ return document.getElementById(id); }
-function saveKey(type,stage){ return "obQuizV1_"+type+"_"+stage; }
-function getSource(type){ return type==="mcq" ? mcqData : tfData; }
-function rotateMotivation(el){ if(!el) return; el.textContent = PHRASES[Math.floor(Math.random()*PHRASES.length)]; }
-setInterval(()=>{ rotateMotivation($("motivationMain")); rotateMotivation($("motivationStages")); rotateMotivation($("motivationQuiz")); }, 6000);
+let screen = 'menu', type = 'mcq', stage = 1, order = [], index = 0, answers = [];
+let pending = null, resetArmed = false, warn = false, tick = 0;
 
-// ===================== حالة اللعبة =====================
-let currentList=[], currentOrder=[], currentIndex=0, currentType="", currentStage=0;
-let userAnswers=[], answered=false, answeredIdx=null;
+setInterval(() => { tick++; document.querySelectorAll('.motivation').forEach(el => el.textContent = PHRASES[tick % PHRASES.length]); }, 6000);
+const phrase = () => PHRASES[tick % PHRASES.length];
 
-function buildStageList(type,stage){
-  const src=getSource(type), [a,b]=STAGES[type][stage-1];
-  currentOrder=[]; for(let i=a;i<b;i++) currentOrder.push(i);
-  shuffleArray(currentOrder);
-  currentList=currentOrder.map(i=>src[i]);
-}
-function persist(){
-  localStorage.setItem(saveKey(currentType,currentStage),
-    JSON.stringify({order:currentOrder, index:currentIndex, answers:userAnswers, done:false}));
-}
-function markDone(score){
-  localStorage.setItem(saveKey(currentType,currentStage),
-    JSON.stringify({order:currentOrder, index:currentIndex, answers:userAnswers, done:true, score:score, total:currentList.length}));
-}
-function clearSaved(type,stage){ localStorage.removeItem(saveKey(type,stage)); }
+function shuffle(arr) { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+function list() { return type === 'mcq' ? mcqData : tfData; }
+function stageList() { const [a, b] = STAGES[type][stage - 1]; return list().slice(a, b); }
+function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
 
-// ===================== التنقل بين الشاشات =====================
-function showScreen(name){
-  $("mainMenu").classList.toggle("hidden", name!=="main");
-  $("stagesMenu").classList.toggle("hidden", name!=="stages");
-  $("quizArea").classList.toggle("hidden", name!=="quiz");
-  $("resultsScreen").classList.toggle("hidden", name!=="results");
-}
-function backToMain(){ resetState(); showScreen("main"); rotateMotivation($("motivationMain")); }
-function backToStages(){ showStages(currentType); }
-
-function resetState(){ currentList=[]; currentOrder=[]; currentIndex=0; userAnswers=[]; answered=false; answeredIdx=null; }
-
-// ===================== قائمة المراحل =====================
-function showStages(type){
-  resetState();
-  currentType=type;
-  $("stagesTitle").textContent = type==="mcq" ? "📖 مراحل اختر الإجابة الصحيحة" : "✅ مراحل صح / خطأ";
-  let html="";
-  for(let s=1;s<=STAGES[type].length;s++){
-    const [a,b]=STAGES[type][s-1];
-    const saved=localStorage.getItem(saveKey(type,s));
-    let badge=`${b-a} سؤال`;
-    if(saved){
-      try{
-        const d=JSON.parse(saved);
-        if(d.done) badge=`✅ ${d.score}/${d.total}`;
-        else if(d.answers && d.answers.some(x=>x)) badge=`⏸️ متوقف عند ${d.index+1}/${b-a}`;
-      }catch(e){}
-    }
-    html+=`<button class="stage-btn" onclick="startStage(${s},'${type}')"><span>🎯 المرحلة ${s}</span><span class="badge">${badge}</span></button>`;
-  }
-  $("stagesList").innerHTML=html;
-  showScreen("stages");
-  rotateMotivation($("motivationStages"));
+function savePatch(patch) {
+  progress[keyOf(type, stage)] = Object.assign({ done: false, order, index, answers }, patch);
+  persist();
 }
 
-function startStage(stage,type){
-  resetState();
-  currentStage=stage; currentType=type;
-  const saved=localStorage.getItem(saveKey(type,stage));
-  if(saved){
-    let d=null;
-    try{ d=JSON.parse(saved); }catch(e){}
-    if(d && d.done){
-      if(!confirm(`خلصت المرحلة دي قبل كده ودرجتك ${d.score}/${d.total}.\nتحب تعيدها من الأول؟`)){ showStages(type); return; }
-      clearSaved(type,stage);
-    } else if(d && d.order && d.answers && d.answers.some(x=>x)){
-      if(confirm(`في تقدم محفوظ للمرحلة دي (واقف عند سؤال ${d.index+1}).\nOK = أكمل من حيث وقفت\nCancel = ابدأ من جديد`)){
-        const src=getSource(type);
-        currentOrder=d.order;
-        currentList=currentOrder.map(i=>src[i]);
-        currentIndex=Math.min(d.index, currentList.length-1);
-        userAnswers=d.answers;
-        showScreen("quiz");
-        renderQuiz();
-        return;
+function startFresh(t, s) {
+  const [a, b] = STAGES[t][s - 1];
+  order = shuffle(Array.from({ length: b - a }, (_, k) => a + k));
+  type = t; stage = s; index = 0; answers = []; warn = false; pending = null;
+  delete progress[keyOf(t, s)]; persist();
+  screen = 'quiz'; render();
+}
+
+function loadSaved(t, s, sv) {
+  type = t; stage = s; order = sv.order; answers = sv.answers;
+  index = sv.done ? sv.order.length : Math.min(sv.index, sv.order.length - 1);
+  warn = false; pending = null;
+  screen = sv.done ? 'results' : 'quiz'; render();
+}
+
+function clickStage(s) {
+  const sv = progress[keyOf(type, s)];
+  if (!sv) { startFresh(type, s); return; }
+  pending = (pending === s) ? null : s; render();
+}
+
+function answer(pick, isC) {
+  if (answers[index]) return;
+  answers[index] = { p: pick, c: isC }; warn = false;
+  savePatch({ answers }); render();
+}
+
+function goNext() {
+  if (!answers[index]) { warn = true; render(); return; }
+  const ni = index + 1; warn = false;
+  if (ni >= order.length) {
+    const score = answers.filter(a => a && a.c).length;
+    savePatch({ index: ni, done: true, score, total: order.length });
+    index = ni; screen = 'results';
+  } else { index = ni; savePatch({ index: ni }); }
+  render();
+}
+function goPrev() { if (index > 0) { warn = false; index--; render(); } }
+
+function resetAll() {
+  if (!resetArmed) { resetArmed = true; render(); return; }
+  progress = {}; persist(); resetArmed = false; pending = null; render();
+}
+
+function correctText(qq) { return type === 'mcq' ? qq.o[qq.c][0] : (qq.c ? 'صح (True)' : 'خطأ (False)'); }
+
+function motivationHTML() { return '<div class="motivation">' + esc(phrase()) + '</div>'; }
+
+function render() {
+  const app = document.getElementById('app');
+  let h = '';
+  if (screen === 'menu') {
+    h += '<div class="section">' + motivationHTML();
+    h += '<div class="grouplabel">اختار نوع الأسئلة</div>';
+    h += '<div class="btnrow">';
+    h += '<button class="btn btn-primary" onclick="goStages(\'mcq\')">اختر الإجابة الصحيحة (34 سؤال)</button>';
+    h += '<button class="btn btn-secondary" onclick="goStages(\'tf\')">صح / خطأ (46 سؤال)</button>';
+    h += '</div></div>';
+    h += '<div class="section"><div class="grouplabel" style="font-size:14px;font-family:var(--sans);font-weight:600;">البداية من جديد</div>';
+    h += '<div class="btnrow"><button class="btn btn-ghost btn-compact" onclick="resetAll()">' + (resetArmed ? 'متأكد؟ اضغط تاني عشان تمسح كل حاجة' : 'مسح كل التقدم المحفوظ') + '</button></div>';
+    h += '<div class="caption">تقدّمك بيتحفظ على الجهاز ده بس.</div></div>';
+  } else if (screen === 'stages') {
+    h += '<div class="section">' + motivationHTML();
+    h += '<div class="grouplabel">مراحل ' + TYPE_NAMES[type] + '</div>';
+    h += '<div class="stagelist">';
+    STAGES[type].forEach(([a, b], k) => {
+      const s = k + 1; const sv = progress[keyOf(type, s)];
+      let badge = (b - a) + ' سؤال';
+      if (sv && sv.done) badge = 'خلصتها: ' + sv.score + ' من ' + sv.total;
+      else if (sv && sv.answers.some(x => x)) badge = 'واقف عند سؤال ' + (sv.index + 1);
+      h += '<div><button type="button" class="stage" onclick="clickStage(' + s + ')"><span>المرحلة ' + s + '</span><span class="badge">' + badge + '</span></button>';
+      if (pending === s && sv) {
+        h += '<div class="stagechoice">';
+        if (sv.done) h += '<button class="btn btn-secondary btn-compact" onclick="loadSaved(\'' + type + '\',' + s + ')">شوف نتيجتك (' + sv.score + ' من ' + sv.total + ')</button>';
+        else h += '<button class="btn btn-primary btn-compact" onclick="loadSaved(\'' + type + '\',' + s + ')">كمّل من سؤال ' + (sv.index + 1) + '</button>';
+        h += '<button class="btn btn-ghost btn-compact" onclick="startFresh(\'' + type + '\',' + s + ')">ابدأ من الأول</button></div>';
       }
-      clearSaved(type,stage);
-    }
-  }
-  buildStageList(type,stage);
-  currentIndex=0; userAnswers=[];
-  showScreen("quiz");
-  renderQuiz();
-}
-
-// ===================== عرض السؤال =====================
-function renderQuiz(){
-  if(currentIndex>=currentList.length){ showResults(); return; }
-  const q=currentList[currentIndex];
-  const correctCount=userAnswers.filter(a=>a&&a.correct).length;
-  $("scoreDisplay").textContent=`⭐ ${correctCount}/${currentList.length}`;
-  $("progressBar").style.width=((currentIndex)/currentList.length*100)+"%";
-  $("questionText").textContent=(currentIndex+1)+". "+q.en;
-  $("questionAr").textContent=q.ar||"";
-  const prev=userAnswers[currentIndex];
-  answered=!!prev; answeredIdx=prev?prev.picked:null;
-
-  if(currentType==="mcq"){
-    $("optionsDiv").innerHTML="";
-    q.o.forEach((opt,idx)=>{
-      const div=document.createElement("div");
-      div.className="option-item"+(answered?" locked":"");
-      div.innerHTML=`<span class="opt-en">${opt[0]}</span>`+(opt[1]?`<span class="opt-ar">${opt[1]}</span>`:"");
-      div.onclick=()=>checkMCQ(idx);
-      if(answered){
-        if(idx===q.c) div.classList.add("option-correct");
-        else if(idx===prev.picked) div.classList.add("option-wrong");
-      }
-      $("optionsDiv").appendChild(div);
+      h += '</div>';
     });
-  } else {
-    const labels=[[true,"✅ صح (True)"],[false,"❌ خطأ (False)"]];
-    $("optionsDiv").innerHTML="";
-    labels.forEach(([val,label],idx)=>{
-      const div=document.createElement("div");
-      div.className="option-item"+(answered?" locked":"");
-      div.textContent=label;
-      div.onclick=()=>checkTF(val,idx);
-      if(answered){
-        if(val===q.c) div.classList.add("option-correct");
-        else if(idx===prev.picked) div.classList.add("option-wrong");
-      }
-      $("optionsDiv").appendChild(div);
-    });
-  }
-
-  if(answered) showFeedback(prev.correct, q);
-  else $("feedbackDiv").innerHTML="";
-  rotateMotivation($("motivationQuiz"));
-}
-
-function correctAnswerText(q){
-  if(currentType==="mcq") return q.o[q.c][0];
-  return q.c ? "صح (True)" : "خطأ (False)";
-}
-
-function showFeedback(isCorrect,q){
-  $("feedbackDiv").innerHTML=
-    `<div class="feedback ${isCorrect?"correct":"wrong"}"><strong>${isCorrect?"✅ إجابة صحيحة!":"❌ إجابة خطأ"}</strong><br>📘 الإجابة الصحيحة: ${correctAnswerText(q)}<br>${q.ex}</div>`;
-}
-
-function lockAndPaint(pickedIsCorrect){
-  const items=$("optionsDiv").querySelectorAll(".option-item");
-  const q=currentList[currentIndex];
-  items.forEach((el,idx)=>{
-    el.classList.add("locked");
-    el.onclick=null;
-    const isCorrectOpt = currentType==="mcq" ? (idx===q.c) : ((idx===0)===q.c);
-    if(isCorrectOpt) el.classList.add("option-correct");
-    else if(idx===pickedIdx) el.classList.add("option-wrong");
-  });
-}
-let pickedIdx=null;
-
-function checkMCQ(idx){
-  if(answered) return;
-  const q=currentList[currentIndex];
-  pickedIdx=idx;
-  const isCorrect=(idx===q.c);   // المقارنة بالرقم مش بالنص
-  userAnswers[currentIndex]={picked:idx, correct:isCorrect};
-  answered=true;
-  lockAndPaint(isCorrect);
-  showFeedback(isCorrect,q);
-  persist();
-  const correctCount=userAnswers.filter(a=>a&&a.correct).length;
-  $("scoreDisplay").textContent=`⭐ ${correctCount}/${currentList.length}`;
-}
-
-function checkTF(val,idx){
-  if(answered) return;
-  const q=currentList[currentIndex];
-  pickedIdx=idx;
-  const isCorrect=(val===q.c);
-  userAnswers[currentIndex]={picked:idx, correct:isCorrect};
-  answered=true;
-  lockAndPaint(isCorrect);
-  showFeedback(isCorrect,q);
-  persist();
-  const correctCount=userAnswers.filter(a=>a&&a.correct).length;
-  $("scoreDisplay").textContent=`⭐ ${correctCount}/${currentList.length}`;
-}
-
-// ===================== شاشة النتيجة =====================
-function showResults(){
-  const correct=userAnswers.filter(a=>a&&a.correct).length;
-  const total=currentList.length;
-  markDone(correct);
-  $("resultsScore").textContent=`درجتك: ${correct} / ${total}`;
-  const pct=correct/total;
-  $("resultsMsg").textContent = pct===1 ? "ممتاز! علامة كاملة، إنت وحش 🏆" : pct>=0.75 ? "كويس جدًا! شوية مراجعة وتبقى تمام 💪" : pct>=0.5 ? "ماشي الحال.. راجع أخطاءك وحاول تاني 📚" : "متزعلش، الغلط أول خطوة للفهم. راجع وجرب تاني 🌱";
-  let wrongHtml="";
-  currentList.forEach((q,i)=>{
-    const a=userAnswers[i];
-    if(!a||!a.correct){
-      wrongHtml+=`<li><span class="m-en"><strong>${q.en}</strong></span>
-        ✅ الإجابة الصحيحة: ${correctAnswerText(q)}<br>📘 ${q.ex}</li>`;
+    h += '</div><div class="btnrow"><button class="btn btn-ghost btn-compact" onclick="goMenu()">رجوع للرئيسية</button></div></div>';
+  } else if (screen === 'quiz') {
+    const qs = stageList(); const qi = order[index]; const q = qs[qi];
+    const cur = answers[index]; const answered = !!cur;
+    const correctCount = answers.filter(a => a && a.c).length;
+    h += '<div class="section">';
+    h += '<div class="scorebar"><span>النجوم: ' + correctCount + ' من ' + qs.length + '</span><span>سؤال ' + (index + 1) + ' من ' + qs.length + '</span></div>';
+    h += '<div class="track"><div class="fill" style="width:' + (index / qs.length * 100) + '%"></div></div>';
+    h += '<div class="q">' + (index + 1) + '. ' + esc(q.en) + '</div>';
+    if (q.ar) h += '<div class="qar">' + esc(q.ar) + '</div>';
+    h += '<div class="options">';
+    if (type === 'mcq') {
+      q.o.forEach((opt, oi) => {
+        let cls = 'opt';
+        if (answered) { cls += ' locked'; if (oi === q.c) cls += ' correct'; else if (oi === cur.p) cls += ' wrong'; }
+        h += '<button type="button" class="' + cls + '" onclick="answer(' + oi + ',' + (oi === q.c) + ')">';
+        h += '<span class="open">' + esc(opt[0]) + '</span>';
+        if (opt[1]) h += '<span class="opar">' + esc(opt[1]) + '</span>';
+        h += '</button>';
+      });
+    } else {
+      [[true, 'صح (True)'], [false, 'خطأ (False)']].forEach(([val, label], oi) => {
+        let cls = 'opt';
+        if (answered) { cls += ' locked'; if ((oi === 0) === q.c) cls += ' correct'; else if (oi === cur.p) cls += ' wrong'; }
+        h += '<button type="button" class="' + cls + '" onclick="answer(' + oi + ',' + (val === q.c) + ')">' + label + '</button>';
+      });
     }
-  });
-  $("mistakesBox").innerHTML = wrongHtml
-    ? `<h3>❌ راجع أخطاءك:</h3><ul style="list-style:none; margin-top:10px;">${wrongHtml}</ul>`
-    : `<div style="text-align:center;">🎉 لا توجد أخطاء! إتقان رائع 🎉</div>`;
-  $("progressBar").style.width="100%";
-  showScreen("results");
-  const hasNext=currentStage<STAGES[currentType].length;
-  $("nextStageBtn").style.display=hasNext?"":"none";
-}
-
-// ===================== التنقل بين الأسئلة =====================
-function moveNext(){
-  if(!answered){
-    $("feedbackDiv").innerHTML='<div class="feedback wrong"><strong>⚠️ تنبيه</strong><br>اختار إجابة الأول يا نجم 😄</div>';
-    return;
+    h += '</div>';
+    if (answered) {
+      h += '<div class="feedback ' + (cur.c ? 'ok' : 'no') + '"><strong>' + (cur.c ? 'إجابة صحيحة!' : 'إجابة خطأ') + '</strong>';
+      h += '<div>الإجابة الصحيحة: <bdi dir="ltr">' + esc(correctText(q)) + '</bdi></div>';
+      h += '<div>' + esc(q.ex) + '</div></div>';
+    }
+    if (warn && !answered) h += '<div class="feedback no"><strong>اختار إجابة الأول يا نجم</strong></div>';
+    h += motivationHTML();
+    h += '<div class="nav"><button class="btn btn-secondary btn-compact" onclick="goPrev()">السابق</button>';
+    h += '<button class="btn btn-primary btn-compact" onclick="goNext()">' + (index + 1 === qs.length ? 'خلّص المرحلة' : 'التالي') + '</button></div>';
+    h += '<div class="btnrow"><button class="btn btn-ghost btn-compact" onclick="goStagesKeep()">رجوع للمراحل (تقدّمك محفوظ)</button></div>';
+    h += '</div>';
+  } else if (screen === 'results') {
+    const qs = stageList();
+    const score = answers.filter(a => a && a.c).length;
+    const pct = qs.length ? score / qs.length : 0;
+    const resultMsg = pct === 1 ? 'ممتاز! علامة كاملة، إنت وحش' : pct >= 0.75 ? 'كويس جدًا! شوية مراجعة وتبقى تمام' : pct >= 0.5 ? 'ماشي الحال.. راجع أخطاءك وحاول تاني' : 'متزعلش، الغلط أول خطوة للفهم. راجع وجرب تاني';
+    const mistakes = order.map((qi, i) => ({ qq: qs[qi], a: answers[i], i })).filter(x => !x.a || !x.a.c);
+    h += '<div class="section"><div class="grouplabel">انتهت المرحلة</div>';
+    h += '<div class="results"><div class="bigscore">درجتك: ' + score + ' من ' + qs.length + '</div><div class="resultmsg">' + resultMsg + '</div></div>';
+    if (mistakes.length === 0) h += '<div class="feedback ok"><strong>لا توجد أخطاء! إتقان رائع</strong></div>';
+    else {
+      h += '<div class="mistakes"><div class="mtitle">راجع أخطاءك:</div>';
+      mistakes.forEach(({ qq }) => {
+        h += '<div class="mitem"><div class="men">' + esc(qq.en) + '</div>';
+        h += '<div>الإجابة الصحيحة: <bdi dir="ltr">' + esc(correctText(qq)) + '</bdi></div>';
+        h += '<div class="mex">' + esc(qq.ex) + '</div></div>';
+      });
+      h += '</div>';
+    }
+    h += '<div class="nav"><button class="btn btn-secondary btn-compact" onclick="startFresh(\'' + type + '\',' + stage + ')">إعادة نفس المرحلة</button>';
+    if (stage < STAGES[type].length) h += '<button class="btn btn-primary btn-compact" onclick="nextStage()">المرحلة التالية</button>';
+    h += '</div><div class="btnrow"><button class="btn btn-ghost btn-compact" onclick="goStagesKeep()">رجوع للمراحل</button></div></div>';
   }
-  currentIndex++;
-  persist();
-  renderQuiz();
-}
-function movePrev(){
-  if(currentIndex>0){ currentIndex--; renderQuiz(); }
+  app.innerHTML = h;
 }
 
-// ===================== ربط الأزرار =====================
-$("mcqBtn").onclick=()=>showStages("mcq");
-$("tfBtn").onclick=()=>showStages("tf");
-$("backToMainBtn").onclick=backToMain;
-$("backToStagesBtn").onclick=backToStages;
-$("resultsBackBtn").onclick=backToStages;
-$("nextBtn").onclick=moveNext;
-$("prevBtn").onclick=movePrev;
-$("replayBtn").onclick=()=>{ clearSaved(currentType,currentStage); const s=currentStage,t=currentType; resetState(); currentStage=s; currentType=t; buildStageList(t,s); currentIndex=0; userAnswers=[]; showScreen("quiz"); renderQuiz(); };
-$("nextStageBtn").onclick=()=>{ startStage(currentStage+1,currentType); };
-$("resetBtn").onclick=()=>{
-  if(confirm("متأكد إنك عايز تمسح كل التقدم المحفوظ؟")){
-    ["tf","mcq"].forEach(t=>STAGES[t].forEach((_,i)=>clearSaved(t,i+1)));
-    alert("اتمسح ✅ يلا نبدأ من جديد!");
-  }
-};
-
-rotateMotivation($("motivationMain"));
-window.startStage=startStage;
-window.backToStages=backToStages;
+function goStages(t) { type = t; pending = null; screen = 'stages'; render(); }
+function goStagesKeep() { pending = null; screen = 'stages'; render(); }
+function goMenu() { pending = null; screen = 'menu'; render(); }
+function nextStage() {
+  const ns = stage + 1; const sv = progress[keyOf(type, ns)];
+  if (sv) { pending = ns; screen = 'stages'; render(); } else startFresh(type, ns);
+}
+render();
 </script>
 </body>
 </html>
