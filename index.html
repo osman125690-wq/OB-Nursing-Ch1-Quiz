@@ -6,49 +6,53 @@
 <title>تمريض النسا والتوليد - الفصل الأول 🩺</title>
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
-body { background:linear-gradient(135deg,#0a1a2e 0%,#0d2b3e 100%); font-family:'Segoe UI','Tajawal','Cairo',sans-serif; color:#eef4ff; padding:20px; min-height:100vh; }
+body { background:linear-gradient(135deg,#faf6f2 0%,#f4efec 100%); font-family:'Segoe UI','Tajawal','Cairo',sans-serif; color:#2b2f36; padding:20px; min-height:100vh; }
 .container { max-width:800px; margin:0 auto; }
+.made-for { text-align:center; margin:4px 0 18px 0; }
+.made-for span { display:inline-block; background:#ffffff; border:1px solid #e8ddd3; box-shadow:0 4px 14px rgba(80,60,45,.08); color:#8a7a6c; font-size:14px; font-weight:600; letter-spacing:.6px; padding:8px 22px; border-radius:30px; }
 .main-btn, .stage-btn, .nav-btn { background:#1e5a7a; border:none; padding:10px 20px; margin:5px; border-radius:30px; color:white; cursor:pointer; font-size:16px; }
-.stage-btn { background:#0e3752; width:100%; text-align:right; display:flex; justify-content:space-between; align-items:center; }
-.stage-btn .badge { font-size:13px; background:#071e2c; padding:3px 12px; border-radius:15px; }
-.back-btn { background:#3a6b47; border:none; padding:10px 20px; border-radius:30px; color:white; cursor:pointer; margin-bottom:15px; display:inline-block; }
-.quiz-card { background:#0b1e2c; border-radius:20px; padding:20px; border:1px solid #2b5c7c; margin-top:20px; }
+.stage-btn { background:#2a6f95; width:100%; text-align:right; display:flex; justify-content:space-between; align-items:center; }
+.stage-btn .badge { font-size:13px; background:#1a4f6d; padding:3px 12px; border-radius:15px; }
+.back-btn { background:#4a8260; border:none; padding:10px 20px; border-radius:30px; color:white; cursor:pointer; margin-bottom:15px; display:inline-block; }
+.quiz-card { background:#ffffff; border-radius:20px; padding:20px; border:1px solid #e8ddd3; box-shadow:0 8px 28px rgba(80,60,45,.07); margin-top:20px; }
 .question-text { font-size:18px; font-weight:bold; margin-bottom:6px; line-height:1.6; direction:ltr; text-align:left; }
-.question-ar { font-size:15px; color:#9fc3dd; margin-bottom:16px; border-bottom:1px solid #2c6285; padding-bottom:10px; line-height:1.7; }
-.option-item { background:#0e2638; border-radius:15px; padding:12px; margin:8px 0; border:1px solid #2d6385; cursor:pointer; line-height:1.6; }
-.option-item .opt-ar { display:block; font-size:13px; color:#9fc3dd; margin-top:2px; }
+.question-ar { font-size:15px; color:#5f6b76; margin-bottom:16px; border-bottom:1px solid #e6dcd2; padding-bottom:10px; line-height:1.7; }
+.option-item { background:#fdfaf7; border-radius:15px; padding:12px; margin:8px 0; border:1px solid #e2d8cd; cursor:pointer; line-height:1.6; }
+.option-item .opt-ar { display:block; font-size:13px; color:#6b7684; margin-top:2px; }
 .option-item .opt-en { direction:ltr; display:block; text-align:left; }
-.option-item:hover { background:#123048; }
+.option-item:hover { background:#f4ede5; }
 .option-item.locked { cursor:default; }
 .option-correct { background:#10b981 !important; border-color:#10b981 !important; color:#03251a; }
 .option-correct .opt-ar, .option-wrong .opt-ar { color:inherit; }
 .option-wrong { background:#ef4444 !important; border-color:#ef4444 !important; color:#2b0505; }
-.feedback { background:#021a28; border-radius:12px; padding:12px; margin:10px 0; border-right:4px solid #3b82f6; line-height:1.7; }
-.feedback.correct { border-right-color:#10b981; background:#06212e; }
-.feedback.wrong { border-right-color:#ef4444; background:#1f1a2e; }
-.score-board { background:#071e2c; padding:5px 15px; border-radius:25px; display:inline-block; margin-bottom:15px; }
-.progress-wrap { background:#071e2c; border-radius:25px; height:8px; margin:0 0 15px 0; overflow:hidden; }
+.feedback { background:#f0f6fb; border-radius:12px; padding:12px; margin:10px 0; border-right:4px solid #3b82f6; line-height:1.7; }
+.feedback.correct { border-right-color:#10b981; background:#ecfdf3; }
+.feedback.wrong { border-right-color:#ef4444; background:#fef1f1; }
+.score-board { background:#efe8e0; color:#4a3f34; padding:5px 15px; border-radius:25px; display:inline-block; margin-bottom:15px; }
+.progress-wrap { background:#e9e0d6; border-radius:25px; height:8px; margin:0 0 15px 0; overflow:hidden; }
 .progress-bar { background:#10b981; height:100%; transition:width .3s; }
 .nav-buttons { display:flex; gap:10px; margin-top:20px; }
 .nav-btn { flex:1; }
 .hidden { display:none !important; }
-.small-back { background:#3a6b47; border:none; padding:5px 12px; border-radius:20px; color:white; cursor:pointer; font-size:12px; margin-bottom:10px; display:inline-block; }
-.motivation { background:#0e3752; border:1px dashed #2d6385; border-radius:15px; padding:10px 15px; margin:15px 0; text-align:center; font-size:15px; color:#ffd97a; min-height:44px; }
-.mistakes-box { background:#071e2c; padding:15px; border-radius:15px; margin-top:15px; text-align:right; }
+.small-back { background:#4a8260; border:none; padding:5px 12px; border-radius:20px; color:white; cursor:pointer; font-size:12px; margin-bottom:10px; display:inline-block; }
+.motivation { background:#fdf7e8; border:1px dashed #dcc79c; border-radius:15px; padding:10px 15px; margin:15px 0; text-align:center; font-size:15px; color:#92610e; min-height:44px; }
+.mistakes-box { background:#f8f3ec; border:1px solid #eee3d6; padding:15px; border-radius:15px; margin-top:15px; text-align:right; }
 .mistakes-box li { margin-bottom:12px; line-height:1.7; }
 .mistakes-box .m-en { direction:ltr; text-align:left; display:block; }
 .results-hero { text-align:center; }
-.reset-btn { background:#5a2b2b; border:none; padding:8px 16px; border-radius:20px; color:#ffb0b0; cursor:pointer; font-size:12px; margin-top:20px; }
+.reset-btn { background:#f7e6e6; border:none; padding:8px 16px; border-radius:20px; color:#b0524f; cursor:pointer; font-size:12px; margin-top:20px; }
 </style>
 </head>
 <body>
 <div class="container">
 
+  <div class="made-for"><span>&#10024; Made for Osman &#10024;</span></div>
+
   <!-- الشاشة الرئيسية -->
   <div id="mainMenu">
     <div style="text-align:center; margin-bottom:10px;">
       <h2>🤰 تمريض النسا والتوليد</h2>
-      <p style="color:#9fc3dd; margin-top:5px;">الفصل الأول: تشريح الجهاز التناسلي الأنثوي والدورة الشهرية</p>
+      <p style="color:#5f6b76; margin-top:5px;">الفصل الأول: تشريح الجهاز التناسلي الأنثوي والدورة الشهرية</p>
     </div>
     <div class="motivation" id="motivationMain"></div>
     <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-top:15px;">
@@ -90,7 +94,7 @@ body { background:linear-gradient(135deg,#0a1a2e 0%,#0d2b3e 100%); font-family:'
     <div class="results-hero">
       <h2 id="resultsTitle">🎉 انتهت المرحلة</h2>
       <p id="resultsScore" style="font-size:20px; margin:10px 0;"></p>
-      <p id="resultsMsg" style="color:#ffd97a;"></p>
+      <p id="resultsMsg" style="color:#b45309;"></p>
     </div>
     <div class="mistakes-box" id="mistakesBox"></div>
     <div style="text-align:center; margin-top:15px;">
